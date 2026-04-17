@@ -17,19 +17,11 @@ function parseTable(section: string): Table {
   };
 }
 
-const TYPE_BADGE: Record<string, string> = {
-  Library: 'badge-info',
-  Performance: 'badge-success',
-  QoL: 'badge-warning',
-  'Add-on': 'badge-secondary',
-  Content: 'badge-primary',
-  Replacement: 'badge-error',
-};
 
 const parts = raw.split('\n## ');
 const introText = parts[0].replace(/# [^\n]+\n/, '').trim();
 const currentTable = parseTable(parts.find(p => p.startsWith('Current mod list')) ?? '');
-const suggestionsTable = parseTable(parts.find(p => p.startsWith('my Suggestions')) ?? '');
+const suggestionsTable = parseTable(parts.find(p => p.startsWith('My Suggestions')) ?? '');
 
 // Parse intro into sections: paragraphs and numbered lists
 const introParts = introText.split('\n\n').map(para => para.trim()).filter(Boolean);
@@ -67,8 +59,8 @@ const introParts = introText.split('\n\n').map(para => para.trim()).filter(Boole
       <!-- Current mod list -->
       <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">Current mod list</h2>
-        <div class="overflow-x-auto rounded-xl shadow-lg">
-          <table class="table table-zebra" id="table-current">
+        <div class="overflow-x-auto rounded-xl border border-base-content/10 bg-base-100">
+          <table class="table" id="table-current">
             <thead>
               <tr>
                 {currentTable.headers.map((h, i) => (
@@ -87,7 +79,7 @@ const introParts = introText.split('\n\n').map(para => para.trim()).filter(Boole
                 <tr class="hover">
                   {row.map((cell, i) =>
                     i === 0
-                      ? <td><span class={`badge badge-sm ${TYPE_BADGE[cell] ?? 'badge-neutral'}`}>{cell}</span></td>
+                      ? <td><span class="badge badge-sm badge-ghost">{cell}</span></td>
                       : <td set:html={cell} />
                   )}
                 </tr>
@@ -100,8 +92,8 @@ const introParts = introText.split('\n\n').map(para => para.trim()).filter(Boole
       <!-- my Suggestions -->
       <section class="mb-12">
         <h2 class="text-2xl font-semibold mb-4">my Suggestions</h2>
-        <div class="overflow-x-auto rounded-xl shadow-lg">
-          <table class="table table-zebra" id="table-suggestions">
+        <div class="overflow-x-auto rounded-xl border border-base-content/10 bg-base-100">
+          <table class="table" id="table-suggestions">
             <thead>
               <tr>
                 {suggestionsTable.headers.map((h, i) => (
@@ -120,7 +112,7 @@ const introParts = introText.split('\n\n').map(para => para.trim()).filter(Boole
                 <tr class="hover">
                   {row.map((cell, i) =>
                     i === 0
-                      ? <td><span class={`badge badge-sm ${TYPE_BADGE[cell] ?? 'badge-neutral'}`}>{cell}</span></td>
+                      ? <td><span class="badge badge-sm badge-ghost">{cell}</span></td>
                       : <td set:html={cell} />
                   )}
                 </tr>

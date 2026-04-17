@@ -1,15 +1,5 @@
 
-# dev modpack
-
-Mods are sorted into types based on their impact to the game:
-
-1. Library: APIs and core mods required by other mods
-2. Performance: Optimization and server utiltiies
-3. QoL: Minor tweaks and utilities that slightly affect gameplay
-4. Add-on: Mods that rely on other mods for functionality 
-5. Content: Full-fledged additions on top of the base game
-
-You can click the labels in the columns to sort by type, name, and environment
+# dev's modpack
 
 ## Current mod list
 
@@ -50,7 +40,8 @@ You can click the labels in the columns to sort by type, name, and environment
 | Library     | Kotlin for Forge            | Both            |
 | Library     | Zeta                        | Both            |
 
-## my Suggestions
+## My Suggestions
+
 
 | **Type**    | **Name**                                                                                           | **Note**                                                                                             | **Environment** |
 | ----------- | -------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | --------------- |
@@ -60,7 +51,7 @@ You can click the labels in the columns to sort by type, name, and environment
 | Add-on      | - Accessories<br>- Accessories Compatibility Layer                                                 | Compatibility for Curios API, Corpse, Artifacts, Relics, etc; required by many mods now              | Both            |
 | Add-on      | - LambDynamicLights <br>- Toni's Immersive Lanterns                                                | Installs on top of Curios/Accessories, allows equipping lanterns for dynamic portable lighting       | Both            |
 | Add-on      | - Relics<br>- Reliquified Artifacts                                                                | Overhauls & balances Artifacts to be upgradable and have progression                                 | Both            |
-| Replacement | - Corpse<br>- Corpse x Curios API Compat<br>- Corpse x Cosmetic Armor Reworked Compat              | Replacement for Gravestone Mod that doesnt' destroy accessories & cosmetic armor on death            |                 |
+| Replacement | - Corpse<br>- Corpse x Curios API Compat<br>- Corpse x Cosmetic Armor Reworked Compat              | Replacement for Gravestone Mod that doesn't destroy accessories & cosmetic armor on death            |                 |
 | Replacement | FTB Ultimine                                                                                       | Replacement FallingTree, a lot more feature rich & optimized                                         | Both            |
 | Replacement | Functional Storage + More Functional Storage                                                       | Replacement for Storage Drawers, way more modern & simple                                            | Both            |
 | Performance | AsyncParticles                                                                                     | Optimizes particle rendering                                                                         | Client          |
@@ -108,7 +99,6 @@ You can click the labels in the columns to sort by type, name, and environment
 | Content     | Animal Feeding Trough                                                                              | Automatic breeding utility block                                                                     | Both            |
 | Content     | Just Dire Things                                                                                   | Fun gadgets that pair well with Create                                                               | Both            |
 | Content     | Just Hammers                                                                                       | Balanced hammers that can break multiple blocks                                                      | Both            |
-| Content     | Rechiseled                                                                                         | Building utility                                                                                     | Both            |
-| Add-on      | Rechiseled: Create                                                                                 | Compatibility for Rechiseled + Create                                                                | Both            |
+| Content     | - Rechiseled<br>- Rechiseled: Create                                                               | Building utility                                                                                     | Both            |
 | Content     | Classic Pipes                                                                                      | Item transportation mod that pairs well with Create                                                  | Both            |
 | Content     | Create: Enchantment Industry                                                                       | Allows automating XP farms in Create                                                                 | Both            |
