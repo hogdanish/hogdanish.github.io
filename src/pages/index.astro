@@ -1,11 +1,166 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import raw from '../content/modlist.md?raw';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+interface Table {
+  headers: string[];
+  rows: string[][];
+}
+
+function parseTable(section: string): Table {
+  const tableLines = section.split('\n').filter(l => l.trim().startsWith('|'));
+  if (tableLines.length < 3) return { headers: [], rows: [] };
+  const split = (line: string) => line.split('|').slice(1, -1).map(c => c.trim());
+  return {
+    headers: split(tableLines[0]).map(h => h.replace(/\*\*/g, '')),
+    rows: tableLines.slice(2).map(split),
+  };
+}
+
+const TYPE_BADGE: Record<string, string> = {
+  Library: 'badge-info',
+  Performance: 'badge-success',
+  QoL: 'badge-warning',
+  'Add-on': 'badge-secondary',
+  Content: 'badge-primary',
+  Replacement: 'badge-error',
+};
+
+const parts = raw.split('\n## ');
+const introText = parts[0].replace(/# [^\n]+\n/, '').trim();
+const currentTable = parseTable(parts.find(p => p.startsWith('Current mod list')) ?? '');
+const suggestionsTable = parseTable(parts.find(p => p.startsWith('my Suggestions')) ?? '');
+
+// Parse intro into sections: paragraphs and numbered lists
+const introParts = introText.split('\n\n').map(para => para.trim()).filter(Boolean);
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="dev modpack">
+  <main class="min-h-screen bg-base-200 text-base-content">
+    <div class="container mx-auto px-4 py-10 max-w-6xl">
+
+      <header class="mb-10">
+        <h1 class="text-4xl font-bold tracking-tight mb-5">dev modpack</h1>
+        <div class="text-base-content/60 text-sm space-y-3 max-w-2xl">
+          {introParts.map(para => {
+            if (/^\d+\./.test(para)) {
+              return (
+                <ol class="list-decimal list-inside space-y-1 ml-1">
+                  {para.split('\n').map(line => {
+                    const text = line.replace(/^\d+\.\s*/, '');
+                    const colonIdx = text.indexOf(':');
+                    if (colonIdx !== -1) {
+                      const label = text.slice(0, colonIdx);
+                      const rest = text.slice(colonIdx + 1).trim();
+                      return <li><strong class="text-base-content/80">{label}</strong>: {rest}</li>;
+                    }
+                    return <li>{text}</li>;
+                  })}
+                </ol>
+              );
+            }
+            return <p>{para}</p>;
+          })}
+        </div>
+      </header>
+
+      <!-- Current mod list -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">Current mod list</h2>
+        <div class="overflow-x-auto rounded-xl shadow-lg">
+          <table class="table table-zebra" id="table-current">
+            <thead>
+              <tr>
+                {currentTable.headers.map((h, i) => (
+                  <th
+                    class="cursor-pointer select-none hover:bg-base-300 transition-colors"
+                    data-col={i}
+                    data-sort=""
+                  >
+                    {h}&nbsp;<span class="sort-icon text-xs opacity-40">⇅</span>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {currentTable.rows.map(row => (
+                <tr class="hover">
+                  {row.map((cell, i) =>
+                    i === 0
+                      ? <td><span class={`badge badge-sm ${TYPE_BADGE[cell] ?? 'badge-neutral'}`}>{cell}</span></td>
+                      : <td set:html={cell} />
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- my Suggestions -->
+      <section class="mb-12">
+        <h2 class="text-2xl font-semibold mb-4">my Suggestions</h2>
+        <div class="overflow-x-auto rounded-xl shadow-lg">
+          <table class="table table-zebra" id="table-suggestions">
+            <thead>
+              <tr>
+                {suggestionsTable.headers.map((h, i) => (
+                  <th
+                    class="cursor-pointer select-none hover:bg-base-300 transition-colors"
+                    data-col={i}
+                    data-sort=""
+                  >
+                    {h}&nbsp;<span class="sort-icon text-xs opacity-40">⇅</span>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {suggestionsTable.rows.map(row => (
+                <tr class="hover">
+                  {row.map((cell, i) =>
+                    i === 0
+                      ? <td><span class={`badge badge-sm ${TYPE_BADGE[cell] ?? 'badge-neutral'}`}>{cell}</span></td>
+                      : <td set:html={cell} />
+                  )}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    document.querySelectorAll<HTMLTableElement>('table[id]').forEach(table => {
+      const ths = table.querySelectorAll<HTMLElement>('th[data-col]');
+      ths.forEach(th => {
+        th.addEventListener('click', () => {
+          const col = Number(th.dataset.col);
+          const asc = th.dataset.sort !== 'asc';
+
+          ths.forEach(h => {
+            h.dataset.sort = '';
+            const icon = h.querySelector('.sort-icon');
+            if (icon) icon.textContent = '⇅';
+          });
+
+          th.dataset.sort = asc ? 'asc' : 'desc';
+          const icon = th.querySelector('.sort-icon');
+          if (icon) icon.textContent = asc ? '↑' : '↓';
+
+          const tbody = table.querySelector('tbody')!;
+          const rows = Array.from(tbody.querySelectorAll('tr'));
+          rows.sort((a, b) => {
+            const aText = (a.cells[col]?.textContent ?? '').trim().toLowerCase();
+            const bText = (b.cells[col]?.textContent ?? '').trim().toLowerCase();
+            return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+          });
+          rows.forEach(row => tbody.appendChild(row));
+        });
+      });
+    });
+  </script>
 </Layout>
