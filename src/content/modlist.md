@@ -1,4 +1,39 @@
-# Dev modpack
+# Dev's modpack guide
+
+IP: `mc.doke.house`
+
+## How to install
+
+### 1. Download the modpack file
+
+Click here to download the modpack file: [modpack.zip](https://www.youtube.com/watch?v=Ns0pQ0oFC78)
+
+### 2. Import into your launcher
+
+On **Prism Launcher** or the **Modrinth App**, click the "Import Modpack" button and select the file you just downloaded. The launcher will handle the rest.
+
+## Launcher optimization (optional)
+### 1. Download GraalVM 25
+
+Go to [graalvm.org/downloads](https://www.graalvm.org/downloads/), select **GraalVM 25** for your OS, and download the archive.
+
+Extract it to an appropriate location (i.e `C:\Program Files\Java\graalvm-25` on Windows)
+
+### 2. Point your launcher to it
+
+In **Prism Launcher** or the **Modrinth App**, go to **Settings → Java**. Browse to the `bin` folder inside the directory you just extracted. Select the GraalVM 25 entry.
+
+### 3. Replace your JVM arguments
+
+Clear any existing custom JVM arguments and paste in the following:
+
+```
+-XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:-DontCompileHugeMethods -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+EagerJVMCI -Djdk.graal.CompilerConfiguration=enterprise -Djdk.graal.TuneInlinerExploration=1 -XX:+UseG1GC -XX:MaxGCPauseMillis=130 -XX:G1NewSizePercent=28 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=20 -XX:G1MixedGCCountTarget=3 -XX:InitiatingHeapOccupancyPercent=10 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=0 -XX:SurvivorRatio=32 -XX:MaxTenuringThreshold=1 -XX:G1SATBBufferEnqueueingThresholdPercent=30 -XX:G1ConcMarkStepDurationMillis=5.0 -XX:AllocatePrefetchStyle=3
+```
+
+### 4. Allocate RAM
+
+Set both minimum and maximum memory to the same value. **8–10 GB** is plenty for most setups, just don't exceed your system's total available RAM.
 
 ## Current mod list
 
@@ -39,7 +74,7 @@
 | Library     | [Kotlin for Forge](https://modrinth.com/mod/kotlin-for-forge)                       |                                                                                                                      | Both            |
 | Library     | [Zeta](https://modrinth.com/mod/zeta)                                               |                                                                                                                      | Both            |
 
-## My Suggestions <!-- checklist -->
+## Suggested mod additions <!-- checklist -->
 
 | **Type**    | **Name**                                                                                                                                                                                                                                                                                                                                                                                                                         | **Note**                                                                                              | **Environment** |
 | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- | --------------- |
