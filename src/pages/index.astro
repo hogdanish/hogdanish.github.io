@@ -7,130 +7,137 @@ interface Table {
   rows: string[][];
 }
 
-function parseTable(section: string): Table {
-  const tableLines = section.split('\n').filter(l => l.trim().startsWith('|'));
-  if (tableLines.length < 3) return { headers: [], rows: [] };
+interface Section {
+  title: string;
+  description: string;
+  hasCheckboxes: boolean;
+  table: Table;
+}
+
+// Convert markdown inline links to <a> tags for set:html rendering
+const convertLinks = (s: string) =>
+  s.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="underline underline-offset-2 decoration-dotted decoration-base-content/30 hover:decoration-base-content/70 transition-colors">$1</a>'
+  );
+
+// Strip all markup to plain text — used for stable localStorage keys
+const toPlainText = (s: string) =>
+  s.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // markdown links → text
+   .replace(/<[^>]+>/g, '')                  // html tags
+   .replace(/\s+/g, ' ')
+   .trim();
+
+function parseTableLines(lines: string[]): Table {
+  if (lines.length < 3) return { headers: [], rows: [] };
   const split = (line: string) => line.split('|').slice(1, -1).map(c => c.trim());
   return {
-    headers: split(tableLines[0]).map(h => h.replace(/\*\*/g, '')),
-    rows: tableLines.slice(2).map(split),
+    headers: split(lines[0]).map(h => h.replace(/\*\*/g, '')),
+    rows: lines.slice(2).map(line => split(line).map(convertLinks)),
   };
 }
 
+function parseMarkdown(markdown: string): { pageTitle: string; sections: Section[] } {
+  const titleMatch = markdown.match(/^#\s+(.+)$/m);
+  const pageTitle = titleMatch ? titleMatch[1].trim() : '';
 
-const parts = raw.split('\n## ');
-const introText = parts[0].replace(/# [^\n]+\n/, '').trim();
-const currentTable = parseTable(parts.find(p => p.startsWith('Current mod list')) ?? '');
-const suggestionsTable = parseTable(parts.find(p => p.startsWith('My Suggestions')) ?? '');
+  const sectionChunks = markdown.split(/^(?=## )/m).filter(c => c.startsWith('## '));
 
-// Parse intro into sections: paragraphs and numbered lists
-const introParts = introText.split('\n\n').map(para => para.trim()).filter(Boolean);
+  const sections: Section[] = sectionChunks.map(chunk => {
+    const lines = chunk.split('\n');
+    const headingLine = lines[0];
+    const hasCheckboxes = /<!--\s*checklist\s*-->/.test(headingLine);
+    const title = headingLine.replace(/^##\s+/, '').replace(/<!--.*-->/, '').trim();
+
+    const descLines: string[] = [];
+    const tableLines: string[] = [];
+
+    for (const line of lines.slice(1)) {
+      const trimmed = line.trim();
+      if (trimmed.startsWith('|')) {
+        tableLines.push(line);
+      } else if (trimmed && tableLines.length === 0) {
+        descLines.push(trimmed);
+      }
+    }
+
+    return { title, description: descLines.join(' '), hasCheckboxes, table: parseTableLines(tableLines) };
+  });
+
+  return { pageTitle, sections };
+}
+
+const { pageTitle, sections } = parseMarkdown(raw);
 ---
 
-<Layout title="dev modpack">
+<Layout title={pageTitle}>
   <main class="min-h-screen bg-base-200 text-base-content">
-    <div class="container mx-auto px-4 py-10 max-w-6xl">
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
 
-      <header class="mb-10">
-        <h1 class="text-4xl font-bold tracking-tight mb-5">dev modpack</h1>
-        <div class="text-base-content/60 text-sm space-y-3 max-w-2xl">
-          {introParts.map(para => {
-            if (/^\d+\./.test(para)) {
-              return (
-                <ol class="list-decimal list-inside space-y-1 ml-1">
-                  {para.split('\n').map(line => {
-                    const text = line.replace(/^\d+\.\s*/, '');
-                    const colonIdx = text.indexOf(':');
-                    if (colonIdx !== -1) {
-                      const label = text.slice(0, colonIdx);
-                      const rest = text.slice(colonIdx + 1).trim();
-                      return <li><strong class="text-base-content/80">{label}</strong>: {rest}</li>;
-                    }
-                    return <li>{text}</li>;
-                  })}
-                </ol>
-              );
-            }
-            return <p>{para}</p>;
-          })}
-        </div>
+      <header class="mb-8">
+        <h1 class="text-3xl font-bold tracking-tight mb-1">{pageTitle}</h1>
+        <p class="text-base-content/40 text-xs">click column headers to sort</p>
       </header>
 
-      <!-- Current mod list -->
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">Current mod list</h2>
-        <div class="overflow-x-auto rounded-xl border border-base-content/10 bg-base-100">
-          <table class="table" id="table-current">
-            <thead>
-              <tr>
-                {currentTable.headers.map((h, i) => (
-                  <th
-                    class="cursor-pointer select-none hover:bg-base-300 transition-colors"
-                    data-col={i}
-                    data-sort=""
-                  >
-                    {h}&nbsp;<span class="sort-icon text-xs opacity-40">⇅</span>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {currentTable.rows.map(row => (
-                <tr class="hover">
-                  {row.map((cell, i) =>
-                    i === 0
-                      ? <td><span class="badge badge-sm badge-ghost">{cell}</span></td>
-                      : <td set:html={cell} />
-                  )}
+      {sections.map((section, si) => (
+        <section class="mb-10">
+          <div class="mb-3">
+            <h2 class="text-lg font-semibold flex items-center gap-2">
+              {section.title}
+              <span class="badge badge-sm badge-ghost font-normal opacity-60">{section.table.rows.length}</span>
+            </h2>
+            {section.description && (
+              <p class="text-base-content/40 text-xs">{section.description}</p>
+            )}
+          </div>
+          <div class="overflow-x-auto rounded-xl border border-base-content/10 bg-base-100">
+            <table class="table table-sm" id={`table-${si}`}>
+              <thead>
+                <tr>
+                  {section.hasCheckboxes && <th class="w-6"></th>}
+                  {section.table.headers.map((h) => (
+                    <th
+                      class="cursor-pointer select-none hover:bg-base-200 transition-colors text-xs font-medium tracking-wide uppercase text-base-content/50"
+                      data-sort=""
+                    >
+                      {h}&nbsp;<span class="sort-icon opacity-40">⇅</span>
+                    </th>
+                  ))}
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <!-- my Suggestions -->
-      <section class="mb-12">
-        <h2 class="text-2xl font-semibold mb-4">my Suggestions</h2>
-        <div class="overflow-x-auto rounded-xl border border-base-content/10 bg-base-100">
-          <table class="table" id="table-suggestions">
-            <thead>
-              <tr>
-                {suggestionsTable.headers.map((h, i) => (
-                  <th
-                    class="cursor-pointer select-none hover:bg-base-300 transition-colors"
-                    data-col={i}
-                    data-sort=""
-                  >
-                    {h}&nbsp;<span class="sort-icon text-xs opacity-40">⇅</span>
-                  </th>
+              </thead>
+              <tbody>
+                {section.table.rows.map(row => (
+                  <tr class="hover" data-mod={section.hasCheckboxes ? toPlainText(row[1]) : undefined}>
+                    {section.hasCheckboxes && (
+                      <td>
+                        <input type="checkbox" class="checkbox checkbox-xs mod-check" />
+                      </td>
+                    )}
+                    {row.map((cell, i) => {
+                      if (i === 0)
+                        return <td class="whitespace-nowrap"><span class="badge badge-sm badge-ghost">{toPlainText(cell)}</span></td>;
+                      if (i === row.length - 1)
+                        return <td class="whitespace-nowrap text-base-content/50 text-xs">{toPlainText(cell) || '—'}</td>;
+                      return <td set:html={cell} />;
+                    })}
+                  </tr>
                 ))}
-              </tr>
-            </thead>
-            <tbody>
-              {suggestionsTable.rows.map(row => (
-                <tr class="hover">
-                  {row.map((cell, i) =>
-                    i === 0
-                      ? <td><span class="badge badge-sm badge-ghost">{cell}</span></td>
-                      : <td set:html={cell} />
-                  )}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ))}
 
     </div>
   </main>
 
   <script>
+    // Sort — uses th.cellIndex so the checkbox column doesn't offset data indices
     document.querySelectorAll<HTMLTableElement>('table[id]').forEach(table => {
-      const ths = table.querySelectorAll<HTMLElement>('th[data-col]');
+      const ths = table.querySelectorAll<HTMLElement>('th[data-sort]');
       ths.forEach(th => {
         th.addEventListener('click', () => {
-          const col = Number(th.dataset.col);
+          const col = th.cellIndex;
           const asc = th.dataset.sort !== 'asc';
 
           ths.forEach(h => {
@@ -152,6 +159,43 @@ const introParts = introText.split('\n\n').map(para => para.trim()).filter(Boole
           });
           rows.forEach(row => tbody.appendChild(row));
         });
+      });
+    });
+
+    // Checkbox persistence via localStorage
+    const STORAGE_KEY = 'modlist-checked';
+
+    const loadChecked = (): Set<string> => {
+      try { return new Set(JSON.parse(localStorage.getItem(STORAGE_KEY) ?? '[]')); }
+      catch { return new Set(); }
+    };
+
+    const saveChecked = (set: Set<string>): void => {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify([...set]));
+    };
+
+    const checked = loadChecked();
+
+    document.querySelectorAll<HTMLInputElement>('.mod-check').forEach(cb => {
+      const row = cb.closest('tr') as HTMLTableRowElement | null;
+      const name = row?.dataset.mod ?? '';
+      if (!name || !row) return;
+
+      if (checked.has(name)) {
+        cb.checked = true;
+        row.classList.add('opacity-40');
+      }
+
+      cb.addEventListener('change', () => {
+        const set = loadChecked();
+        if (cb.checked) {
+          set.add(name);
+          row.classList.add('opacity-40');
+        } else {
+          set.delete(name);
+          row.classList.remove('opacity-40');
+        }
+        saveChecked(set);
       });
     });
   </script>
