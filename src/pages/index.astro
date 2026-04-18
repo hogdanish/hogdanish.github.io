@@ -171,11 +171,16 @@ const { pageTitle, serverIP, sections } = parseMarkdown(raw);
           return (
             <section class="mb-8">
               <div class="rounded-xl border border-base-content/10 bg-base-100">
-                <div class="px-5 py-3 border-b border-base-content/10">
+                <button class="section-toggle w-full px-4 py-3 border-b border-base-content/10 flex items-center justify-between gap-2 hover:bg-base-200/50 transition-colors rounded-t-xl">
                   <h2 class="text-sm font-semibold text-base-content/70">{section.title}</h2>
-                </div>
-                <div class="px-5 py-4 prose prose-sm prose-invert max-w-none">
-                  <div set:html={mdToHtml(section.body)} />
+                  <svg class="chevron w-3.5 h-3.5 text-base-content/40 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="card-body">
+                  <div>
+                    <div class="prose prose-sm prose-invert max-w-none">
+                      <div set:html={mdToHtml(section.body)} />
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -184,12 +189,15 @@ const { pageTitle, serverIP, sections } = parseMarkdown(raw);
 
         return (
           <section class="mb-8">
-            <div class="rounded-xl border border-base-content/10 bg-base-100">
-              <div class="px-4 py-3 border-b border-base-content/10 flex items-center gap-2">
-                <h2 class="text-sm font-semibold text-base-content/70">{section.title}</h2>
+            <div class="rounded-xl border border-base-content/10 bg-base-100 overflow-hidden">
+              <button class="section-toggle w-full px-4 py-3 border-b border-base-content/10 flex items-center gap-2 hover:bg-base-200/50 transition-colors rounded-t-xl">
+                <h2 class="text-sm font-semibold text-base-content/70 flex-1 text-left">{section.title}</h2>
                 <span class="badge badge-sm badge-ghost font-normal opacity-60">{section.table.rows.length}</span>
-              </div>
-            <div class="overflow-x-auto">
+                <svg class="chevron w-3.5 h-3.5 text-base-content/40 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+              </button>
+              <div class="card-body">
+                <div>
+                  <div class="overflow-x-auto">
               <table class="table table-sm" id={`table-${si}`}>
                 <thead>
                   <tr>
@@ -223,7 +231,9 @@ const { pageTitle, serverIP, sections } = parseMarkdown(raw);
                   ))}
                 </tbody>
               </table>
-            </div>
+                </div>
+                </div>
+              </div>
             </div>
           </section>
         );
@@ -233,6 +243,19 @@ const { pageTitle, serverIP, sections } = parseMarkdown(raw);
   </main>
 
   <script>
+    // Collapsible sections
+    document.querySelectorAll<HTMLButtonElement>('.section-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const body = btn.nextElementSibling as HTMLElement;
+        const chevron = btn.querySelector('.chevron') as HTMLElement;
+        const collapsed = body.classList.toggle('collapsed');
+        chevron.style.transform = collapsed ? 'rotate(-90deg)' : '';
+        // hide border-b when collapsed so card looks fully closed
+        btn.classList.toggle('border-b', !collapsed);
+        btn.classList.toggle('rounded-b-xl', collapsed);
+      });
+    });
+
     // Copy IP button
     document.getElementById('copy-ip-btn')?.addEventListener('click', (e) => {
       const btn = e.currentTarget as HTMLButtonElement;

@@ -10,7 +10,7 @@ Click here to download the modpack file: [modpack.zip](https://www.youtube.com/w
 
 ### 2. Import into your launcher
 
-On **Prism Launcher** or the **Modrinth App**, click the "Import Modpack" button and select the file you just downloaded. The launcher will handle the rest.
+In **Prism Launcher** or the **Modrinth App**, click the "Import Modpack" button and select the file you just downloaded. The launcher will handle the rest.
 
 ## Launcher optimization (optional)
 ### 1. Download GraalVM 25

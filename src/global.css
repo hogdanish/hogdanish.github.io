@@ -13,6 +13,36 @@
   margin-top: 0;
 }
 
+.prose :last-child {
+  margin-bottom: 0;
+}
+
+/* Flush table edges inside cards */
+.table th:first-child,
+.table td:first-child {
+  padding-left: 1rem;
+}
+
+.table th:last-child,
+.table td:last-child {
+  padding-right: 1rem;
+}
+
+.card-body {
+  display: grid;
+  grid-template-rows: 1fr;
+  transition: grid-template-rows 0.2s ease, padding 0.2s ease;
+}
+
+.card-body.collapsed {
+  grid-template-rows: 0fr;
+  padding: 0;
+}
+
+.card-body > * {
+  overflow: hidden;
+}
+
 .prose p {
   margin-top: 0.6em;
   margin-bottom: 0.6em;
