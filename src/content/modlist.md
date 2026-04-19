@@ -39,6 +39,10 @@ Paste the following into the "Java Arguments" field:
 
 Navigate to the instance settings for the modpack itself and ensure its using the global settings you just configured. For **Prism Launcher**, you'll want to make sure the "Java Installation", "Memory", and "Java Arguments" fields in the instance settings are all NOT checked.
 
+### 5. Launch the game!
+
+**If you run into any crashes, double check that the modpack instance itself is actually using the global settings you configured and is pointing to the correct Java installation (GraalVM 25).**
+
 ## Current mod list
 
 | **Type**    | **Name**                                                                                                          | **Note**                                                  | **Environment** |
