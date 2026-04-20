@@ -72,6 +72,7 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Performance | ✨ [Leaves Be Gone](https://modrinth.com/mod/leaves-be-gone)                                                         | Fast leaf decay after tree chopping                       | Both            |
 | QoL         | ✨ [No More Phantoms](https://modrinth.com/mod/no-more-phantoms)                                                     | Adds a phantom membrane recipe                            | Both            |
 | QoL         | ✨ [Visual Workbench](https://modrinth.com/mod/visual-workbench)                                                     | Items stay visible in crafting tables                     | Both            |
+| QoL         | ✨ [Polymorph](https://modrinth.com/mod/polymorph/version/VEburL70)                                                   | Cycle through conflicting recipes                     | Both            |
 | Library     | [Accessories](https://modrinth.com/mod/accessories)                                                               | Modern equipment API; preferred by newer mods             | Both            |
 | Library     | [Accessories Compatibility Layer](https://modrinth.com/mod/accessories-compat-layer)                              | Bridges Accessories with Curios-dependent mods            | Both            |
 | Add-on      | [Accessorify](https://modrinth.com/mod/accessorify)                                                               | Makes vanilla items equippable as accessories             | Both            |
