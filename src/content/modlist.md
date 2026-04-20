@@ -18,6 +18,8 @@ Click here to download the modpack file: [Gingblock Client 1.1.0](https://www.dr
 
 If you want to avoid losing custom keybinds, minimap data, etc, you can just manually install all new mods in the list below marked with "✨" to your current instance.
 
+Alternatively, you can just manually copy over relevant folders from your old instance into the new instance. (i.e the `xaero` directory)
+
 Otherwise, just follow the same installation steps above.
 
 ## Optimization guide (click to expand)
