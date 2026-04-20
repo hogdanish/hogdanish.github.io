@@ -6,22 +6,32 @@ IP: `mc.doke.house`
 
 ### 1. Download the modpack file
 
-Click here to download the modpack file: [modpack.zip](https://www.youtube.com/watch?v=Ns0pQ0oFC78)
+Click here to download the modpack file: [Gingblock Client 1.1.0](https://www.dropbox.com/scl/fi/z9m49c60b4rtr8zclmp3i/Gingblock-Client-1.1.0.mrpack?rlkey=8l309pkk6zp1sz01riqqxz3da&st=tkcmuv9q&dl=0)
 
 ### 2. Import into your launcher
 
-Click "New instance" → "Import" → select the `.zip` file you just downloaded. The launcher will handle the rest.
+**Modrinth**: "Add instance" → "Modpack base" → "Import modpack" → select the `.mrpack` file you just downloaded.
 
-## Optimization guide (optional)
+**Prism Launcher**: "Add instance" → "Import" → select the `.mrpack` file you just downloaded.
+
+### 3. Updating
+
+If you want to avoid losing custom keybinds, minimap data, etc, you can just manually install all new mods in the list below marked with "✨" to your current instance.
+
+Otherwise, just follow the same installation steps above.
+
+## Optimization guide (click to expand)
 ### 1. Download & install GraalVM 25
 
 Go to [graalvm.org/downloads](https://www.graalvm.org/downloads/), select **GraalVM 25** for your OS, and download the archive. Extract it to an appropriate location (`C:\Program Files\Java\` on Windows)
 
 ### 2. Point your launcher to GraalVM 25
 
-Go to your launcher's global settings → "Java installations" → "Detect" → select the GraalVM 25 entry (for Modrinth, this is under the "Java 25 location"). If GraalVM 25 doesn't show up, click "Browse" and manually navigate to the `bin` folder inside the directory you just extracted.
+**Modrinth**: Global settings → `Java installations` → `Java 25 location` → `Detect` → select entry with `GraalVM` in it 
 
-If using **Prism Launcher**, make sure to also tick "Skip Java compatability check" to avoid issues.
+**Prism Launcher**: Global preferences → `Java` → `Java installation` → `Detect` → select entry with `GraalVM` in it
+
+If GraalVM isn't automatically detected, click "Browse" and manually navigate to the `bin` folder inside the directory you just extracted.
 
 ### 3. Allocate RAM
 
@@ -41,12 +51,25 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 
 ### 5. Launch the game!
 
-**If you run into any crashes, double check that the modpack instance itself is actually using the global settings you configured and is pointing to the correct Java installation (GraalVM 25).**
+⚠️ **If you run into any crashes:**
+
+- Double check that the modpack instance itself is actually using the global settings you configured and is pointing to the correct Java installation (GraalVM 25).
+- If you still encounter issues, try removing the `-XX:+UseCompactObjectHeaders` flag from the above arguments.
 
 ## Current mod list
 
 | **Type**    | **Name**                                                                                                          | **Note**                                                  | **Environment** |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------- |
+| QoL         | ✨ [FTB Backups 3](https://modrinth.com/mod/ftb-backups-2)                                                           | Automated server world backups                            | Server          |
+| Library     | ✨ [FTB Essentials (Forge & Fabric)](https://modrinth.com/mod/ftb-essentials)                                        | Required library for FTB mods                             | Both            |
+| Library     | ✨ [FTB Library (NeoForge)](https://modrinth.com/mod/ftb-library-fabric)                                             | Required library for FTB mods                             | Both            |
+| QoL         | ✨ [FTB Ultimine](https://modrinth.com/mod/ftb-ultimine-fabric)                                                      | Vein mining via keybind (default `~`)                     | Both            |
+| Performance | ✨ [Clumps](https://modrinth.com/mod/clumps)                                                                         | Clumps XP orbs to reduce XP farm lag                     | Both            |
+| Performance | ✨ [Concurrent Chunk Management Engine (NeoForge)](https://modrinth.com/mod/c2me-fabric)                             | Chunk loading performance for clients & servers           | Both            |
+| QoL         | ✨ [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights)                                                   | Dynamic light sources (e.g. held torches)                 | Client          |
+| Performance | ✨ [Leaves Be Gone](https://modrinth.com/mod/leaves-be-gone)                                                         | Fast leaf decay after tree chopping                       | Both            |
+| QoL         | ✨ [No More Phantoms](https://modrinth.com/mod/no-more-phantoms)                                                     | Adds a phantom membrane recipe                            | Both            |
+| QoL         | ✨ [Visual Workbench](https://modrinth.com/mod/visual-workbench)                                                     | Items stay visible in crafting tables                     | Both            |
 | Library     | [Accessories](https://modrinth.com/mod/accessories)                                                               | Modern equipment API; preferred by newer mods             | Both            |
 | Library     | [Accessories Compatibility Layer](https://modrinth.com/mod/accessories-compat-layer)                              | Bridges Accessories with Curios-dependent mods            | Both            |
 | Add-on      | [Accessorify](https://modrinth.com/mod/accessorify)                                                               | Makes vanilla items equippable as accessories             | Both            |
@@ -91,7 +114,6 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | QoL         | [Easy Magic](https://modrinth.com/mod/easy-magic)                                                                 | Enchanting tables keep lapis                              | Both            |
 | Performance | [EntityCulling](https://modrinth.com/mod/entityculling)                                                           | Culls offscreen entities                                  | Client          |
 | Content     | [Explorer's Compass](https://modrinth.com/mod/explorers-compass)                                                  | Structure finder utility                                  | Both            |
-| QoL         | [FallingTree](https://modrinth.com/mod/fallingtree)                                                               | Whole-tree chopping (consider FTB Ultimine instead)       | Both            |
 | Content     | [Farmer's Delight](https://modrinth.com/mod/farmers-delight)                                                      | Cooking & farming expansion                               | Both            |
 | Performance | [Fastquit](https://modrinth.com/mod/fastquit)                                                                     | Faster world quit                                         | Client          |
 | Performance | [Ferrite Core](https://modrinth.com/mod/ferrite-core)                                                             | Memory usage reduction                                    | Both            |
@@ -142,13 +164,13 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | QoL         | [Right Click Harvest](https://modrinth.com/mod/right-click-harvest)                                               | Right-click to harvest & replant crops                    | Both            |
 | Library     | [Searchables](https://modrinth.com/mod/searchables)                                                               | Search API (used by Controlling, JEI, etc.)               | Both            |
 | QoL         | [Simple Voice Chat](https://modrinth.com/mod/simple-voice-chat)                                                   | Proximity voice chat                                      | Both            |
-| QoL         | [Sound Physics Remastered](https://modrinth.com/mod/sound-physics-remastered)                                     | Realistic audio propagation & reverb                      | Both            |
 | Performance | [Sinytra Connector](https://modrinth.com/mod/connector)                                                           | Runs Fabric mods on NeoForge                              | Both            |
 | Performance | [Sodium](https://modrinth.com/mod/sodium)                                                                         | Rendering optimization                                    | Client          |
 | Performance | [Sodium Extra](https://modrinth.com/mod/sodium-extra)                                                             | Extra Sodium toggles                                      | Client          |
 | Content     | [Sophisticated Backpacks](https://modrinth.com/mod/sophisticated-backpacks)                                       | Upgradeable backpacks                                     | Both            |
 | Add-on      | [Sophisticated Backpacks Create Integration](https://modrinth.com/mod/sophisticated-backpacks-create-integration) | Create compatibility for Sophisticated Backpacks          | Both            |
 | Library     | [Sophisticated Core](https://modrinth.com/mod/sophisticated-core)                                                 | Sophisticated mods dependency                             | Both            |
+| QoL         | [Sound Physics Remastered](https://modrinth.com/mod/sound-physics-remastered)                                     | Realistic audio propagation & reverb                      | Both            |
 | Content     | [Supplementaries](https://modrinth.com/mod/supplementaries)                                                       | Vanilla+ additions                                        | Both            |
 | Library     | [SuperMartijn642's Core Lib](https://modrinth.com/mod/supermartijn642corelib)                                     | Rechiseled/Functional Storage dependency                  | Both            |
 | Library     | [SuperMartijn642's Config Library](https://modrinth.com/mod/supermartijn642configlib)                             | Config library for SuperMartijn642 mods                   | Both            |
@@ -157,4 +179,3 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Library     | [TxniLib](https://modrinth.com/mod/txnilib)                                                                       | Dependency library                                        | Both            |
 | Performance | [Vanillin](https://modrinth.com/mod/vanillin)                                                                     | Entity rendering optimization                             | Client          |
 | Library     | [Zeta](https://modrinth.com/mod/zeta)                                                                             | Quark dependency                                          | Both            |
-

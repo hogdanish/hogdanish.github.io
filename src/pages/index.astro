@@ -11,6 +11,7 @@ interface Section {
   title: string;
   body: string;
   hasCheckboxes: boolean;
+  defaultCollapsed: boolean;
   table: Table;
 }
 
@@ -119,6 +120,7 @@ function parseMarkdown(markdown: string): { pageTitle: string; serverIP: string 
     const lines = chunk.split('\n');
     const headingLine = lines[0];
     const hasCheckboxes = /<!--\s*checklist\s*-->/.test(headingLine);
+    const defaultCollapsed = /\(click to expand\)/i.test(headingLine);
     const title = headingLine.replace(/^##\s+/, '').replace(/<!--.*-->/, '').trim();
 
     const bodyLines: string[] = [];
@@ -136,6 +138,7 @@ function parseMarkdown(markdown: string): { pageTitle: string; serverIP: string 
       title,
       body: bodyLines.join('\n').trim(),
       hasCheckboxes,
+      defaultCollapsed,
       table: parseTableLines(tableLines),
     };
   });
@@ -171,11 +174,11 @@ const { pageTitle, serverIP, sections } = parseMarkdown(raw);
           return (
             <section class="mb-8">
               <div class="rounded-xl border border-base-content/10 bg-base-100">
-                <button class="section-toggle w-full px-4 py-3 border-b border-base-content/10 flex items-center justify-between gap-2 hover:bg-base-200/50 transition-colors rounded-t-xl">
+                <button class={`section-toggle w-full px-4 py-3 flex items-center justify-between gap-2 hover:bg-base-200/50 transition-colors rounded-t-xl ${section.defaultCollapsed ? 'rounded-b-xl' : 'border-b border-base-content/10'}`} data-default-collapsed={section.defaultCollapsed ? 'true' : undefined}>
                   <h2 class="text-sm font-semibold text-base-content/70">{section.title}</h2>
                   <svg class="chevron w-3.5 h-3.5 text-base-content/40 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
                 </button>
-                <div class="card-body">
+                <div class={`card-body${section.defaultCollapsed ? ' collapsed' : ''}`}>
                   <div>
                     <div class="prose prose-sm prose-invert max-w-none">
                       <div set:html={mdToHtml(section.body)} />
@@ -243,6 +246,12 @@ const { pageTitle, serverIP, sections } = parseMarkdown(raw);
   </main>
 
   <script>
+    // Initialize sections that are collapsed by default
+    document.querySelectorAll<HTMLButtonElement>('.section-toggle[data-default-collapsed]').forEach(btn => {
+      const chevron = btn.querySelector('.chevron') as HTMLElement;
+      if (chevron) chevron.style.transform = 'rotate(-90deg)';
+    });
+
     // Collapsible sections
     document.querySelectorAll<HTMLButtonElement>('.section-toggle').forEach(btn => {
       btn.addEventListener('click', () => {
