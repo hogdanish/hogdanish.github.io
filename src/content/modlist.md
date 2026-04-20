@@ -6,7 +6,7 @@ IP: `mc.doke.house`
 
 ### 1. Download the modpack file
 
-Click here to download the modpack file: [Gingblock Client 1.1.0](https://www.dropbox.com/scl/fi/ma58cq0kelgo3vmj7kw6e/BoredSMP-Client-1.1.0.mrpack?rlkey=v4rb9iamvybpt3py1hkbzf7a3&st=w2dtfrxk&dl=0)
+Click here to download the modpack file: [BoredSMP Client 1.1.0](https://www.dropbox.com/scl/fi/ma58cq0kelgo3vmj7kw6e/BoredSMP-Client-1.1.0.mrpack?rlkey=v4rb9iamvybpt3py1hkbzf7a3&st=w2dtfrxk&dl=0)
 
 ### 2. Import into your launcher
 
