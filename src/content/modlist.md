@@ -6,7 +6,7 @@ IP: `mc.doke.house`
 
 ### 1. Download the modpack file
 
-Click here to download the modpack file: [BoredSMP Client 1.1.0](https://www.dropbox.com/scl/fi/3uvs4sftg0pf066rr29lk/BoredSMP-Client-1.2.0.mrpack?rlkey=gl1b6i0rbpihicj69x3ajdgco&st=vc7xmet0&dl=0)
+Click here to download the modpack file: [BoredSMP Client 1.1.0](https://www.dropbox.com/scl/fi/smabmsy0dd3reesxp4ke7/BoredSMP-Client-1.2.0.mrpack?rlkey=avqdqbi4vxbl59xo7e16031c7&st=b4ffmzxw&dl=0)
 
 ### 2. Import into your launcher
 
