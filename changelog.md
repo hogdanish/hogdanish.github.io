@@ -1,0 +1,50 @@
+
+- **New**: Construction Wands Revived
+- **New**: Trash Slot
+- **New**: Mouse Tweaks
+- **New**: Create Power Loaders
+- **New**: No Chat Reports
+- **New**: Create Integrated Farming
+- **New**: Create Slice n Dice
+- **New**: Create Central Kitchen
+- **New**: Create Food
+- **New**: Create Ratatouille
+- **New**: Create Trading Floor
+- **New**: Create Railways Navigator
+- **New**: Create Connected
+- **New**: Create Dreams and Desires
+- **New**: Create Design n Decor
+- **New**: Create Ultimate Factory
+- **New**: Create Contraption Terminals
+- **New**: Create Compressed
+- **New**: Easy Mob Farm
+- **New**: Snad
+- **New**: UltiCreate Compatibility
+- **Removed**: Reliquified Artifacts
+- **Updated**: Balm (`21.0.57`)
+- **Updated**: BSL Shaders (`10.1.3`)
+- **Updated**: Classic Pipes (`1.1.3`)
+- **Updated**: Collective (`1.21.1-8.22`)
+- **Updated**: C2ME (`0.3.0+alpha.0.91`)
+- **Updated**: Create (`6.0.10`)
+- **Updated**: Create Deco (`2.1.3`)
+- **Updated**: Create: Dragons Plus (`1.10.0b`)
+- **Updated**: Create: Enchantment Industry (`2.3.1`)
+- **Updated**: Farmer's Delight (`1.3.1`)
+- **Updated**: Gnetum (`3.3.2`)
+- **Updated**: Iris & Oculus Flywheel Compat (`2.3.0`)
+- **Updated**: Ixeris (`4.2.0`)
+- **Updated**: Lootr (`1.11.37.119`)
+- **Updated**: ModernFix (`5.27.4`)
+- **Updated**: Moonlight Lib (`3.0.0-beta`)
+- **Updated**: Quark (`4.1-477`)
+- **Updated**: Relics (`0.12.0`)
+- **Updated**: Sophisticated Backpacks (`3.25.42.1709`)
+- **Updated**: Sophisticated Core (`1.4.33.1808`)
+- **Updated**: Supplementaries (`3.6.0`)
+- **Updated**: Titanium (`1.21-4.0.43`)
+- **Updated**: Zeta (`1.1-40`)
+- **Tweak**: Disabled Quark Forgotten mob
+- **Tweak**: Disable Quark loot chests
+- **Tweak**: Disabled mob spawning with backpacks
+- **Tweak**: Lowered Relics upgrade level limit to zero

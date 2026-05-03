@@ -6,7 +6,7 @@ IP: `mc.doke.house`
 
 ### 1. Download the modpack file
 
-Click here to download the modpack file: [BoredSMP Client 1.1.0](https://www.dropbox.com/scl/fi/ma58cq0kelgo3vmj7kw6e/BoredSMP-Client-1.1.0.mrpack?rlkey=v4rb9iamvybpt3py1hkbzf7a3&st=w2dtfrxk&dl=0)
+Click here to download the modpack file: [BoredSMP Client 1.1.0](https://www.dropbox.com/scl/fi/3uvs4sftg0pf066rr29lk/BoredSMP-Client-1.2.0.mrpack?rlkey=gl1b6i0rbpihicj69x3ajdgco&st=vc7xmet0&dl=0)
 
 ### 2. Import into your launcher
 
@@ -62,17 +62,17 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 
 | **Type**    | **Name**                                                                                                          | **Note**                                                  | **Environment** |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------- |
-| QoL         | ✨ [FTB Backups 3](https://modrinth.com/mod/ftb-backups-2)                                                           | Automated server world backups                            | Server          |
-| Library     | ✨ [FTB Essentials (Forge & Fabric)](https://modrinth.com/mod/ftb-essentials)                                        | Required library for FTB mods                             | Both            |
-| Library     | ✨ [FTB Library (NeoForge)](https://modrinth.com/mod/ftb-library-fabric)                                             | Required library for FTB mods                             | Both            |
-| QoL         | ✨ [FTB Ultimine](https://modrinth.com/mod/ftb-ultimine-fabric)                                                      | Vein mining via keybind (default `~`)                     | Both            |
-| Performance | ✨ [Clumps](https://modrinth.com/mod/clumps)                                                                         | Clumps XP orbs to reduce XP farm lag                     | Both            |
-| Performance | ✨ [Concurrent Chunk Management Engine (NeoForge)](https://modrinth.com/mod/c2me-fabric)                             | Chunk loading performance for clients & servers           | Both            |
-| QoL         | ✨ [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights)                                                   | Dynamic light sources (e.g. held torches)                 | Client          |
-| Performance | ✨ [Leaves Be Gone](https://modrinth.com/mod/leaves-be-gone)                                                         | Fast leaf decay after tree chopping                       | Both            |
-| QoL         | ✨ [No More Phantoms](https://modrinth.com/mod/no-more-phantoms)                                                     | Adds a phantom membrane recipe                            | Both            |
-| QoL         | ✨ [Visual Workbench](https://modrinth.com/mod/visual-workbench)                                                     | Items stay visible in crafting tables                     | Both            |
-| QoL         | ✨ [Polymorph](https://modrinth.com/mod/polymorph/version/VEburL70)                                                   | Cycle through conflicting recipes                     | Both            |
+| QoL         | [FTB Backups 3](https://modrinth.com/mod/ftb-backups-2)                                                           | Automated server world backups                            | Server          |
+| Library     | [FTB Essentials (Forge & Fabric)](https://modrinth.com/mod/ftb-essentials)                                        | Required library for FTB mods                             | Both            |
+| Library     | [FTB Library (NeoForge)](https://modrinth.com/mod/ftb-library-fabric)                                             | Required library for FTB mods                             | Both            |
+| QoL         | [FTB Ultimine](https://modrinth.com/mod/ftb-ultimine-fabric)                                                      | Vein mining via keybind (default `~`)                     | Both            |
+| Performance | [Clumps](https://modrinth.com/mod/clumps)                                                                         | Clumps XP orbs to reduce XP farm lag                     | Both            |
+| Performance | [Concurrent Chunk Management Engine (NeoForge)](https://modrinth.com/mod/c2me-fabric)                             | Chunk loading performance for clients & servers           | Both            |
+| QoL         | [LambDynamicLights](https://modrinth.com/mod/lambdynamiclights)                                                   | Dynamic light sources (e.g. held torches)                 | Client          |
+| Performance | [Leaves Be Gone](https://modrinth.com/mod/leaves-be-gone)                                                         | Fast leaf decay after tree chopping                       | Both            |
+| QoL         | [No More Phantoms](https://modrinth.com/mod/no-more-phantoms)                                                     | Adds a phantom membrane recipe                            | Both            |
+| QoL         | [Visual Workbench](https://modrinth.com/mod/visual-workbench)                                                     | Items stay visible in crafting tables                     | Both            |
+| QoL         | [Polymorph](https://modrinth.com/mod/polymorph/version/VEburL70)                                                   | Cycle through conflicting recipes                     | Both            |
 | Library     | [Accessories](https://modrinth.com/mod/accessories)                                                               | Modern equipment API; preferred by newer mods             | Both            |
 | Library     | [Accessories Compatibility Layer](https://modrinth.com/mod/accessories-compat-layer)                              | Bridges Accessories with Curios-dependent mods            | Both            |
 | Add-on      | [Accessorify](https://modrinth.com/mod/accessorify)                                                               | Makes vanilla items equippable as accessories             | Both            |
@@ -92,6 +92,7 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Content     | [Compressed Fuel](https://modrinth.com/mod/compressed-fuel)                                                       | Compressed fuel blocks for furnaces                       | Both            |
 | Performance | [Configured Defaults](https://modrinth.com/mod/configured-defaults)                                               | Ships default configs/keybinds to users                   | Client          |
 | QoL         | [Controlling](https://modrinth.com/mod/controlling)                                                               | Searchable keybind menu                                   | Client          |
+| QoL         | [✨ Construction Wands Revived](https://modrinth.com/mod/construction-wands-revived)                               | Place lines or planes of blocks with a wand               | Both            |
 | QoL         | [Corpse](https://modrinth.com/mod/corpse)                                                                         | Death drop protection preserving accessories              | Both            |
 | Add-on      | [Corpse Curios Compatibility](https://modrinth.com/mod/corpse-x-curios-api-compat)                                | Corpse compatibility for Curios API                       | Both            |
 | Content     | [Create](https://modrinth.com/mod/create)                                                                         | Kinetic automation & contraptions                         | Both            |
@@ -102,6 +103,20 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Add-on      | [Create: Enchantment Industry](https://modrinth.com/mod/create-enchantment-industry)                              | Automates XP & enchanting with Create                     | Both            |
 | Add-on      | [Create: Interiors](https://modrinth.com/mod/interiors)                                                           | Interior design blocks for Create                         | Both            |
 | Add-on      | [Create: Steam 'n' Rails](https://modrinth.com/mod/create-steam-n-rails)                                          | Expanded trains & rails                                   | Both            |
+| Add-on      | [✨ Create: Central Kitchen](https://modrinth.com/mod/create-central-kitchen)                                      | Food processing automation for Create & Farmer's Delight  | Both            |
+| Add-on      | [✨ Create Compressed](https://modrinth.com/mod/create-compressed)                                                 | Compressed resource blocks for Create processing          | Both            |
+| Add-on      | [✨ Create Connected](https://modrinth.com/mod/create-connected)                                                   | Connected textures for Create's cosmetic blocks           | Both          |
+| Add-on      | [✨ Create Contraption Terminals](https://modrinth.com/mod/create-contraption-terminals)                           | Add control terminals to Create contraptions              | Both            |
+| Add-on      | [✨ Create: Design 'n' Decor](https://modrinth.com/mod/create-design-n-decor)                                      | Decorative building blocks themed around Create           | Both            |
+| Add-on      | [✨ Create: Dreams and Desires](https://modrinth.com/mod/create-dreams-and-desires)                                | Functional & decorative expansion for Create              | Both            |
+| Add-on      | [✨ Create Food](https://modrinth.com/mod/create-food)                                                             | Food-themed processing and automation for Create          | Both            |
+| Add-on      | [✨ Create Integrated Farming](https://modrinth.com/mod/create-integrated-farming)                                 | Automates crop farming using Create mechanics             | Both            |
+| Add-on      | [✨ Create Power Loaders](https://modrinth.com/mod/create-power-loaders)                                           | Chunk loaders powered by Create's rotational force        | Both            |
+| Add-on      | [✨ Create Railways Navigator](https://modrinth.com/mod/create-railways-navigator)                                 | Map and route planner for Create train networks           | Both            |
+| Add-on      | [✨ Create Ratatouille](https://modrinth.com/mod/create-ratatouille)                                               | Advanced cooking automation add-on for Create             | Both            |
+| Add-on      | [✨ Create Slice n Dice](https://modrinth.com/mod/slice-and-dice)                                                  | Farmer's Delight processing via Create machines           | Both            |
+| Add-on      | [✨ Create Trading Floor](https://modrinth.com/mod/create-trading-floor)                                           | Automates villager trading with Create contraptions       | Both            |
+| Add-on      | [✨ Create Ultimate Factory](https://modrinth.com/mod/create-ultimate-factory)                                     | End-game factory automation building blocks               | Both            |
 | Library     | [Curios API](https://modrinth.com/mod/curios)                                                                     | Legacy trinket slot API (paired with Accessories)         | Both            |
 | QoL         | [Cut Through](https://modrinth.com/mod/cut-through)                                                               | Attack through foliage                                    | Client          |
 | QoL         | [Default Options](https://modrinth.com/mod/default-options)                                                       | Enforces default user options on first launch             | Client          |
@@ -115,6 +130,7 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Add-on      | [EMI Professions (EMIP)](https://modrinth.com/mod/emi-professions-emip)                                           | Shows villager trades in EMI                              | Both            |
 | QoL         | [Easy Anvils](https://modrinth.com/mod/easy-anvils)                                                               | Anvils keep items on exit                                 | Both            |
 | QoL         | [Easy Magic](https://modrinth.com/mod/easy-magic)                                                                 | Enchanting tables keep lapis                              | Both            |
+| Content     | [✨ Easy Mob Farm](https://modrinth.com/mod/easy-mob-farm)                                                         | Simple upgradeable blocks for automated mob farming       | Both            |
 | Performance | [EntityCulling](https://modrinth.com/mod/entityculling)                                                           | Culls offscreen entities                                  | Client          |
 | Content     | [Explorer's Compass](https://modrinth.com/mod/explorers-compass)                                                  | Structure finder utility                                  | Both            |
 | Content     | [Farmer's Delight](https://modrinth.com/mod/farmers-delight)                                                      | Cooking & farming expansion                               | Both            |
@@ -150,8 +166,10 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Performance | [ModernFix](https://modrinth.com/mod/modernfix)                                                                   | Broad performance & memory patches                        | Both            |
 | Library     | [Moonlight Lib](https://modrinth.com/mod/moonlight)                                                               | Library (Supplementaries dep)                             | Both            |
 | Performance | [More Culling](https://modrinth.com/mod/moreculling)                                                              | Block/entity culling optimization                         | Both            |
+| QoL         | [✨ Mouse Tweaks](https://modrinth.com/mod/mouse-tweaks)                                                           | Enhances inventory item drag & scroll behavior            | Client          |
 | Content     | [Nature's Compass](https://modrinth.com/mod/natures-compass)                                                      | Biome finder utility                                      | Both            |
 | Performance | [NetherPortalFix](https://modrinth.com/mod/netherportalfix)                                                       | Fixes nether portal linking bugs                          | Both            |
+| QoL         | [✨ No Chat Reports](https://modrinth.com/mod/no-chat-reports)                                                     | Prevents chat messages from being reported to Mojang      | Both            |
 | QoL         | [No Elytras](https://modrinth.com/mod/no-elytras)                                                                 | Disables elytra                                           | Both            |
 | QoL         | [Not Enough Recipe Book](https://modrinth.com/mod/not-enough-recipe-book)                                         | Disables vanilla recipe book for perf                     | Both            |
 | Library     | [OctoLib](https://modrinth.com/mod/octolib)                                                                       | Dependency library                                        | Both            |
@@ -163,10 +181,10 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Content     | [Rechiseled](https://modrinth.com/mod/rechiseled)                                                                 | Extensive building block variants                         | Both            |
 | Add-on      | [Rechiseled: Create](https://modrinth.com/mod/rechiseled-create)                                                  | Rechiseled variants of Create's cosmetic blocks           | Both            |
 | Content     | [Relics](https://modrinth.com/mod/relics-mod)                                                                     | Trinket mod with unique upgradeable items                 | Both            |
-| Add-on      | [Reliquified Artifacts](https://modrinth.com/mod/reliquified-artifacts)                                           | Integrates Artifacts with the Relics upgrade system       | Both            |
 | QoL         | [Right Click Harvest](https://modrinth.com/mod/right-click-harvest)                                               | Right-click to harvest & replant crops                    | Both            |
 | Library     | [Searchables](https://modrinth.com/mod/searchables)                                                               | Search API (used by Controlling, JEI, etc.)               | Both            |
 | QoL         | [Simple Voice Chat](https://modrinth.com/mod/simple-voice-chat)                                                   | Proximity voice chat                                      | Both            |
+| Content     | [✨ Snad](https://modrinth.com/mod/snad)                                                                           | Sand variant that accelerates nearby crop growth          | Both            |
 | Performance | [Sinytra Connector](https://modrinth.com/mod/connector)                                                           | Runs Fabric mods on NeoForge                              | Both            |
 | Performance | [Sodium](https://modrinth.com/mod/sodium)                                                                         | Rendering optimization                                    | Client          |
 | Performance | [Sodium Extra](https://modrinth.com/mod/sodium-extra)                                                             | Extra Sodium toggles                                      | Client          |
@@ -179,6 +197,8 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Library     | [SuperMartijn642's Config Library](https://modrinth.com/mod/supermartijn642configlib)                             | Config library for SuperMartijn642 mods                   | Both            |
 | Library     | [Titanium](https://modrinth.com/mod/titanium)                                                                     | Hrududu Industries library                                | Both            |
 | Content     | [Tom's Simple Storage Mod](https://modrinth.com/mod/toms-storage)                                                 | Networked storage system                                  | Both            |
+| QoL         | [✨ Trash Slot](https://modrinth.com/mod/trashslot)                                                                | Adds a dedicated item trash slot to the inventory         | Both          |
 | Library     | [TxniLib](https://modrinth.com/mod/txnilib)                                                                       | Dependency library                                        | Both            |
+| Library     | [✨ UltiCreate Compatibility](https://modrinth.com/mod/ulticreate-compatibility)                                   | Shared compatibility layer for UltiCreate addon mods      | Both            |
 | Performance | [Vanillin](https://modrinth.com/mod/vanillin)                                                                     | Entity rendering optimization                             | Client          |
 | Library     | [Zeta](https://modrinth.com/mod/zeta)                                                                             | Quark dependency                                          | Both            |
