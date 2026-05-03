@@ -6,7 +6,7 @@ IP: `mc.doke.house`
 
 ### 1. Download the modpack file
 
-Click here to download the modpack file: [BoredSMP Client 1.1.0](https://www.dropbox.com/scl/fi/smabmsy0dd3reesxp4ke7/BoredSMP-Client-1.2.0.mrpack?rlkey=avqdqbi4vxbl59xo7e16031c7&st=b4ffmzxw&dl=0)
+Click here to download the modpack file: [BoredSMP Client 1.2.1](https://www.dropbox.com/scl/fi/hy7zqqdsbv86p4yijk7oy/BoredSMP-Client-1.2.1.mrpack?rlkey=fxruq71zmq13coo0kys9ray05&st=5cubtz7w&dl=0)
 
 ### 2. Import into your launcher
 
@@ -113,7 +113,6 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Add-on      | [✨ Create Integrated Farming](https://modrinth.com/mod/create-integrated-farming)                                 | Automates crop farming using Create mechanics             | Both            |
 | Add-on      | [✨ Create Power Loaders](https://modrinth.com/mod/create-power-loaders)                                           | Chunk loaders powered by Create's rotational force        | Both            |
 | Add-on      | [✨ Create Railways Navigator](https://modrinth.com/mod/create-railways-navigator)                                 | Map and route planner for Create train networks           | Both            |
-| Add-on      | [✨ Create Ratatouille](https://modrinth.com/mod/create-ratatouille)                                               | Advanced cooking automation add-on for Create             | Both            |
 | Add-on      | [✨ Create Slice n Dice](https://modrinth.com/mod/slice-and-dice)                                                  | Farmer's Delight processing via Create machines           | Both            |
 | Add-on      | [✨ Create Trading Floor](https://modrinth.com/mod/create-trading-floor)                                           | Automates villager trading with Create contraptions       | Both            |
 | Add-on      | [✨ Create Ultimate Factory](https://modrinth.com/mod/create-ultimate-factory)                                     | End-game factory automation building blocks               | Both            |
