@@ -1,0 +1,212 @@
+- Accessories
+- Accessories Compatibility Layer
+- Accessorify
+- AdvancedLootInfo
+- All The Leaks
+- Almanac
+- Amendments
+- Apothic Spawners
+- AppleSkin
+- Architectury
+- Artifacts
+- AttributeFix
+- BadOptimizations
+- BaguetteLib
+- Balm
+- Baubley Heart Canisters
+- Beltborne Lanterns
+- Beltborne Lanterns: Accessories Layer
+- Better Beacons
+- Better Compatibility Checker
+- BetterF3
+- BetterThanMending
+- Bookshelf
+- Brewin' And Chewin'
+- Cerbons API
+- Chunky
+- ChunkyBorder
+- Classic Pipes
+- Cloth Config v15 API
+- Clumps
+- Collective
+- Compressed Fuel
+- Concurrent Chunk Management Engine
+- Configurable
+- Configured Defaults
+- Construction Wands Revived
+- Continuity
+- Controlling
+- CoroUtil
+- Corpse
+- Corpse Curios Compatibility
+- Crafting Tweaks
+- Crash Assistant
+- Create
+- Create Aeronautics
+- Create Aeronautics \- Rechiseled Compat
+- Create Compressed
+- Create Contraption Terminals
+- Create Deco
+- Create Railways Navigator
+- Create Slice & Dice
+- Create touchpad scrolling fix
+- Create: Bells & Whistles
+- Create: Central Kitchen
+- Create: Connected
+- Create: Copycats\+
+- Create: Dragons Plus
+- Create: Dreams n' Desires
+- Create: Enchantable Machinery
+- Create: Enchantment Industry
+- Create: Food
+- Create: Integrated Farming
+- Create: Interiors
+- Create: Power Loader
+- Create: Steam 'n' Rails 1\.21\.1
+- Create: Trading Floor
+- Create: Ultimate Factory
+- Curios API
+- Cut Through
+- Default Options
+- Design n' Decor
+- Distinguished Potions
+- DragonLib
+- Durability Tooltip
+- EMI
+- EMI Enchanting
+- EMI Loot
+- EMI Ores
+- EMI Professions \(EMIP\)
+- EMIffect
+- Easy Anvils
+- Easy Magic
+- Easy Mob Farm
+- Effect Descriptions
+- EnchantmentDescriptions
+- EntityCulling
+- Explorer's Compass
+- Extra Mod Integrations
+- FTB Backups 3
+- FTB Essentials
+- FTB Library
+- FTB Ultimine
+- FallingTree
+- Farmer's Delight
+- Fast IP Ping
+- Fast Item Frames
+- Fast Paintings
+- Fast Suite
+- Fast Workbench
+- FastFurnace
+- Fastquit
+- Ferrite Core
+- Forgified Fabric API
+- Functional Storage
+- Fusion
+- Fzzy Config
+- Gnetum
+- Hang Glider
+- Hostile Neural Networks
+- ImmediatelyFast
+- Immersive Aircraft
+- Immersive Aircraft: Better Engines
+- Immersive Armors
+- Immersive Melodies
+- Immersive Optimization
+- Immersive Paintings
+- Iris
+- Iris Flywheel Compat
+- ItemLocks
+- Ixeris
+- Jade
+- Jade Addons
+- JamLib
+- Just Enough Archaeology
+- Just Enough Breeding
+- Just Enough Resources
+- Just Hammers
+- Just Zoom
+- Konkrete
+- Kotlin for Forge
+- LambDynamicLights
+- Let Me Despawn
+- Lighty
+- Lithium
+- Load My F\*\*\*ing Tags
+- Lootr
+- Man of Many Planes
+- Mob Grinding Utils
+- Model Gap Fix
+- ModernFix
+- Moonlight Lib
+- More Culling
+- More Functional Storage
+- MoreMouseTweaks
+- Mouse Tweaks
+- Mouse Tweaks x ItemLocks Compat
+- MouseTweaks x Accessories Fix
+- NBT Autocomplete
+- Nature's Compass
+- NeoAuth
+- Neruina
+- NetherPortalFix
+- No Chat Reports
+- No Elytras
+- No More Phantoms
+- Not Enough Recipe Book
+- OctoLib
+- Overflowing Bars
+- PacketFixer
+- Particle Core
+- Placebo
+- PolyLib
+- Polymorph
+- PrickleMC
+- Puzzles Lib
+- Quark
+- Rechiseled
+- Rechiseled: Create
+- Redirected
+- Reese's Sodium Options
+- Relics
+- Resource Pack Overrides
+- Right Click Harvest
+- Sable
+- Saturn
+- Searchables
+- ServerCore
+- Simple Voice Chat
+- Sinytra Connector
+- Snad
+- Sodium
+- Sodium Extra
+- Sophisticated Backpacks
+- Sophisticated Backpacks Create Integration
+- Sophisticated Core
+- Sound Physics Remastered
+- Status Effect Bars
+- Stylish Effects
+- SuperMartijn642's Config Library
+- SuperMartijn642's Core Lib
+- Supplementaries
+- Tesseract API
+- Titanium
+- Tom's Simple Storage Mod
+- Too Fast
+- TooManyRecipeViewers
+- Tooltip overhaul
+- TrashSlot
+- TxniLib
+- UltiCreate Compatability
+- Vanillin
+- Visual Workbench
+- What Are They Up To
+- WorldEdit
+- Xaero's Minimap
+- Xaero's World Map
+- XaeroPlus
+- YUNG's API
+- Yeetus Experimentus
+- Zeta
+- oωo
+- spark
