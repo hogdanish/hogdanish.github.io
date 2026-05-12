@@ -6,7 +6,7 @@ IP: `mc.doke.house`
 
 ### 1. Download the modpack file
 
-Click here to download the modpack file: [BoredSMP Client 1.3.0](https://www.dropbox.com/scl/fi/t6zferl0ykmw5kqrx032f/BoredSMP-Client-1.3.0.mrpack?rlkey=vmexkndls6wbqxf4x832r7m1p&st=i2u8pnyp&dl=0)
+Click here to download the modpack file: [BoredSMP Client 1.4.0](https://www.dropbox.com/scl/fi/jmwjkitawyewo7mkv6dib/BoredSMP-Client-1.4.0.mrpack?rlkey=zd5hm3gk4lt3ozz0mmrsitj8i&st=qqqhw1hj&dl=0)
 
 ### 2. Import into your launcher
 
@@ -23,6 +23,16 @@ Alternatively, you can just manually copy over relevant folders from your old in
 Otherwise, just follow the same installation steps above.
 
 ## Optimization guide (click to expand)
+
+### Prerequisite: disable performance-intensive mods
+
+If you run into any performance issues, I heavily reccomend disabling one or more of these mods:
+
+- Iris Shaders (and Iris Flywheel Compat)
+- Sound Physics Remastered
+- LambDynamicLights
+- Distant Horizons (if you use it)
+
 ### 1. Download & install GraalVM 25
 
 Go to [graalvm.org/downloads](https://www.graalvm.org/downloads/), select **GraalVM 25** for your OS, and download the archive. Extract it to an appropriate location (`C:\Program Files\Java\` on Windows)
@@ -60,171 +70,197 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 
 ## Changelogs (click to expand)
 
-### 1.3.0
+### 1.4.0
 
-- **New**: AdvancedLootInfo
-- **New**: All The Leaks
-- **New**: Almanac
-- **New**: Apothic Spawners
-- **New**: AttributeFix
-- **New**: BadOptimizations
-- **New**: Baubley Heart Canisters
-- **New**: Better Beacons
-- **New**: Better Compatibility Checker
-- **New**: BetterF3
-- **New**: Bookshelf
-- **New**: Cerbons API
-- **New**: Chunky
-- **New**: ChunkyBorder
-- **New**: Configurable
-- **New**: Continuity
-- **New**: CoroUtil
-- **New**: Crafting Tweaks
-- **New**: Crash Assistant
-- **New**: Create Aeronautics
-- **New**: Create Aeronautics – Rechiseled Compat
-- **New**: Create Crafts & Additions
-- **New**: Create touchpad scrolling fix
-- **New**: Create: Enchantable Machinery
-- **New**: Distinguished Potions
-- **New**: DragonLib
-- **New**: Durability Tooltip
-- **New**: Effect Descriptions
-- **New**: EnchantmentDescriptions
-- **New**: Extra Mod Integrations
-- **New**: FallingTree
-- **New**: Fast IP Ping
-- **New**: Fast Item Frames
-- **New**: Fast Paintings
-- **New**: Fast Suite
-- **New**: Fast Workbench
-- **New**: FastFurnace
-- **New**: Hostile Neural Networks
-- **New**: Immersive Melodies
-- **New**: Immersive Optimization
-- **New**: ItemLocks
-- **New**: Just Enough Archaeology
-- **New**: Just Enough Resources
-- **New**: Let Me Despawn
-- **New**: Lighty
-- **New**: Load My F***ing Tags
-- **New**: Mob Grinding Utils
-- **New**: Model Gap Fix
-- **New**: MoreMouseTweaks
-- **New**: Mouse Tweaks x ItemLocks Compat
-- **New**: MouseTweaks x Accessories Fix
-- **New**: NBT Autocomplete
-- **New**: NeoAuth
-- **New**: Neruina
-- **New**: Overflowing Bars
-- **New**: Particle Core
-- **New**: Placebo
-- **New**: PrickleMC
-- **New**: Redirected
-- **New**: Reese's Sodium Options
-- **New**: Resource Pack Overrides
-- **New**: Sable
-- **New**: Saturn
-- **New**: ServerCore
-- **New**: Status Effect Bars
-- **New**: Stylish Effects
-- **New**: Tesseract API
-- **New**: Too Fast
-- **New**: TooManyRecipeViewers
-- **New**: Tooltip overhaul
-- **New**: What Are They Up To
-- **New**: WorldEdit
-- **New**: Xaero's Minimap
-- **New**: Xaero's World Map
-- **New**: XaeroPlus
-- **New**: Yeetus Experimentus
-- **New**: Spark
-- **Removed**: Distraction Free Recipes
-- **Removed**: Dynamic FPS
-- **Removed**: Just Enough Items (JEI)
-- **Removed**: Leaves Be Gone
+- Updated NeoForge to `21.1.229`
+- New: Create Unbreakable Pickaxe
+- New: Create Unbreakable Netherite Axe
+- New: Create Unbreakable Netherite Shovel
+- New: Create Unbreakable Netherite Sword
+- New: Create Unbreakable Netherite Paxel
+- New: Create Nuclear
+- New: Create Tracks
+- New: Create Escalated
+- New: Create Cobblestone
+- New: Vista
+- New: Vista Aeronautics Fix
+- New: Create Propulsion Simulated
+- New: Applied Energistics 2
+- New: Applied Energistics 2 Wireless Terminals
+- New: Rechiseled Applied Energistics 2
+- New: AdvancedAE
+- New: Extended AE
+- New: ME Requester
+- New: MEGA Cells
+- New: AE2WTLib
+- New: Applied Flux
+- New: GuideME
+- New: Create AE2 recipes
+- New: Applied Create
+- New: AE2 JEI Integration
+- New: AE2 Network Analyser
+- New: AEInfinityBooster
+- New: EnderDrives
+- New: Modular Bees
+- New: Productive Bees
+- New: Botany Pots
+- New: Botany Trees
+- New: Botany Pots Tiers
+- New: Staaaaaaaaaaaack (Stxck)
+- New: Handcrafted
+- New: CC Tweaked
+- New: CCC Bridge
+- New: CC Sable
+- New: Tom's Peripherals
+- New: Advanced Peripherals
+- New: AllTheCompressed
+- New: Tool Belt
+- New: Torchmaster
+- New: Kubejs
+- New: GeckoLib 4
+- New: Glodium
+- New: ResourcefulLib
+- New: Rhino
+- New: FTB JEI Extras
+- Updated: Moonlight Lib (`1.21.1-3.0.7`)
+- Updated: Supplementaries (`1.21.1-3.6.4`)
+- Updated: EMI (`1.1.23+1.21.1+neoforge`)
+- Updated: Immersive Melodies (`0.6.3+1.21.1`)
+- Updated: Tesseract API (`1.11.12-1.21.1`)
+- Updated: Relics (`0.12.3`)
+- Removed: Vanillin
+- Removed: Immersive Optimization
+- Removed: Concurrent Chunk Management Engine (C2ME)
 
 ## Current mod list
 
 | **Type**    | **Name**                                                                                                          | **Note**                                                  | **Environment** |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------- |
-| Add-on      | [✨ AdvancedLootInfo](https://modrinth.com/mod/advancedlootinfo)                                                   | Detailed loot tables for recipe viewers                   | Both            |
-| Performance | [✨ All The Leaks](https://modrinth.com/mod/all-the-leaks)                                                         | Detects and reports memory leaks                          | Both            |
-| Content     | [✨ Almanac](https://modrinth.com/mod/almanac)                                                                     | In-game almanac with crop/biome info                      | Both            |
-| Content     | [✨ Apothic Spawners](https://modrinth.com/mod/apothic-spawners)                                                   | Configurable, upgradeable mob spawners                    | Both            |
-| QoL         | [✨ AttributeFix](https://modrinth.com/mod/attributefix)                                                           | Removes hardcoded attribute caps                          | Both            |
-| Performance | [✨ BadOptimizations](https://modrinth.com/mod/badoptimizations)                                                   | Misc client-side optimizations                            | Client          |
-| Content     | [✨ Baubley Heart Canisters](https://modrinth.com/mod/baubley-heart-canisters)                                     | Craftable max-HP-increasing canisters                     | Both            |
-| Content     | [✨ Better Beacons](https://modrinth.com/mod/better-beacons)                                                       | Expanded beacon effects and ranges                        | Both            |
-| QoL         | [✨ Better Compatibility Checker](https://modrinth.com/mod/better-compatibility-checker)                           | Warns clients of mismatched server mods                   | Both            |
-| QoL         | [✨ BetterF3](https://modrinth.com/mod/betterf3)                                                                   | Customizable F3 debug overlay                             | Client          |
-| Library     | [✨ Bookshelf](https://modrinth.com/mod/bookshelf-lib)                                                             | Darkhax dependency library                                | Both            |
-| Library     | [✨ Cerbons API](https://modrinth.com/mod/cerbons-api)                                                             | Dependency library                                        | Both            |
-| Performance | [✨ Chunky](https://modrinth.com/mod/chunky)                                                                       | Pre-generates chunks to reduce live-load lag              | Both            |
-| Add-on      | [✨ ChunkyBorder](https://modrinth.com/mod/chunkyborder)                                                           | World border integration for Chunky                       | Both            |
-| Library     | [✨ Configurable](https://modrinth.com/mod/configurable)                                                           | Config library                                            | Both            |
-| Performance | [✨ Continuity](https://modrinth.com/mod/continuity)                                                               | Connected texture support                                 | Client          |
-| Library     | [✨ CoroUtil](https://modrinth.com/mod/coroutil)                                                                   | Corosus mods dependency library                           | Both            |
-| QoL         | [✨ Crafting Tweaks](https://modrinth.com/mod/crafting-tweaks)                                                     | Crafting grid management QoL                              | Both            |
-| QoL         | [✨ Crash Assistant](https://modrinth.com/mod/crash-assistant)                                                     | Surfaces and helps report crashes                         | Client          |
-| Add-on      | [✨ Create Aeronautics](https://modrinth.com/mod/create-aeronautics)                                               | Flying contraptions for Create                            | Both            |
-| Add-on      | [✨ Create Aeronautics – Rechiseled Compat](https://modrinth.com/mod/create-aeronautics-rechiseled-compat)         | Rechiseled compatibility for Create Aeronautics           | Both            |
-| Add-on      | [✨ Create Crafts & Additions](https://modrinth.com/mod/createaddition)                                               | Flying contraptions for Create                            | Both            |
-| QoL         | [✨ Create touchpad scrolling fix](https://modrinth.com/mod/create-touchpad-scrolling-fix)                         | Fixes Create scroll inputs on laptop touchpads            | Client          |
-| Add-on      | [✨ Create: Enchantable Machinery](https://modrinth.com/mod/create-enchantable-machinery)                          | Allows enchanting Create machinery                        | Both            |
-| QoL         | [✨ Distinguished Potions](https://modrinth.com/mod/distinguished-potions)                                         | Visually differentiates potion variants                   | Client          |
-| Library     | [✨ DragonLib](https://modrinth.com/mod/dragonlib)                                                                 | Dependency library                                        | Both            |
-| QoL         | [✨ Durability Tooltip](https://modrinth.com/mod/durability-tooltip)                                               | Shows item durability in tooltips                         | Client          |
-| QoL         | [✨ Effect Descriptions](https://modrinth.com/mod/effect-descriptions)                                             | Tooltip descriptions for status effects                   | Both            |
-| QoL         | [✨ EnchantmentDescriptions](https://modrinth.com/mod/enchantment-descriptions)                                    | Tooltip descriptions for enchantments                     | Both            |
-| Add-on      | [✨ Extra Mod Integrations](https://modrinth.com/mod/extra-mod-integrations)                                       | Cross-mod recipe integrations for EMI                     | Both            |
-| QoL         | [✨ FallingTree](https://modrinth.com/mod/falling-tree)                                                            | Chops whole trees with one cut                            | Both            |
-| Performance | [✨ Fast IP Ping](https://modrinth.com/mod/fast-ip-ping)                                                           | Speeds up server list ping                                | Client          |
-| Performance | [✨ Fast Item Frames](https://modrinth.com/mod/fast-item-frames)                                                   | Optimizes item frame rendering                            | Both            |
-| Performance | [✨ Fast Paintings](https://modrinth.com/mod/fast-paintings)                                                       | Optimizes painting rendering                              | Both            |
-| Performance | [✨ Fast Suite](https://modrinth.com/mod/fast-suite)                                                               | Bundle of misc fast-tick fixes                            | Both            |
-| Performance | [✨ Fast Workbench](https://modrinth.com/mod/fastworkbench)                                                        | Optimizes crafting table tick                             | Both            |
-| Performance | [✨ FastFurnace](https://modrinth.com/mod/fastfurnace)                                                             | Optimizes furnace tick                                    | Both            |
-| Content     | [✨ Hostile Neural Networks](https://modrinth.com/mod/hostile-neural-networks)                                     | Simulate captured mobs to farm drops                      | Both            |
-| Content     | [✨ Immersive Melodies](https://modrinth.com/mod/immersive-melodies)                                               | Playable musical instruments                              | Both            |
-| Performance | [✨ Immersive Optimization](https://modrinth.com/mod/immersive-optimization)                                       | Rendering optimizations for Immersive mods                | Both            |
-| QoL         | [✨ ItemLocks](https://modrinth.com/mod/itemlocks)                                                                 | Lock inventory slots from being moved                     | Client          |
-| Add-on      | [✨ Just Enough Archaeology](https://modrinth.com/mod/just-enough-archaeology)                                     | Shows archaeology loot in EMI/JEI                         | Both            |
-| Add-on      | [✨ Just Enough Resources](https://modrinth.com/mod/just-enough-resources)                                         | Shows mob/world data in recipe viewers                    | Both            |
-| Performance | [✨ Let Me Despawn](https://modrinth.com/mod/let-me-despawn)                                                       | Lets mobs despawn properly to reduce entity load          | Both            |
-| QoL         | [✨ Lighty](https://modrinth.com/mod/lighty)                                                                       | Light-level overlay for mob spawning                      | Client          |
-| QoL         | [✨ Load My F\*\*\*ing Tags](https://modrinth.com/mod/load-my-tags)                                                 | Forces stubborn data tags to load                         | Both            |
-| Content     | [✨ Mob Grinding Utils](https://modrinth.com/mod/mob-grinding-utils)                                               | Mob farm utility blocks and items                         | Both            |
-| QoL         | [✨ Model Gap Fix](https://modrinth.com/mod/modelgapfix)                                                           | Fixes block-model rendering gaps                          | Client          |
-| QoL         | [✨ MoreMouseTweaks](https://modrinth.com/mod/moremousetweaks)                                                     | Adds further inventory mouse interactions                 | Client          |
-| Add-on      | [✨ Mouse Tweaks x ItemLocks Compat](https://modrinth.com/mod/mousetweaks-itemlocks-compat)                        | Compatibility patch between Mouse Tweaks and ItemLocks    | Client          |
-| Add-on      | [✨ MouseTweaks x Accessories Fix](https://modrinth.com/mod/mousetweaks-accessories-fix)                           | Fixes Mouse Tweaks behavior with Accessories slots        | Client          |
-| QoL         | [✨ NBT Autocomplete](https://modrinth.com/mod/nbt-autocomplete)                                                   | Autocompletes NBT in commands                             | Client          |
-| QoL         | [✨ NeoAuth](https://modrinth.com/mod/neoauth)                                                                     | Microsoft account auth helper                             | Client          |
-| QoL         | [✨ Neruina](https://modrinth.com/mod/neruina)                                                                     | Prevents crashes from ticking entity errors               | Both            |
-| QoL         | [✨ Overflowing Bars](https://modrinth.com/mod/overflowing-bars)                                                   | Stacks HP/armor/XP bars instead of shrinking icons        | Client          |
-| Library     | [✨ Particle Core](https://modrinth.com/mod/particle-core)                                                         | Particle dependency library                               | Both            |
-| Library     | [✨ Placebo](https://modrinth.com/mod/placebo)                                                                     | Shadows_of_Fire dependency library                        | Both            |
-| Library     | [✨ PrickleMC](https://modrinth.com/mod/pricklemc)                                                                 | Dependency library                                        | Both            |
-| QoL         | [✨ Redirected](https://modrinth.com/mod/redirected)                                                               | Redirects deprecated/missing references                   | Both            |
-| QoL         | [✨ Reese's Sodium Options](https://modrinth.com/mod/reeses-sodium-options)                                        | Improved Sodium video options menu                        | Client          |
-| QoL         | [✨ Resource Pack Overrides](https://modrinth.com/mod/resource-pack-overrides)                                     | Per-pack settings & enable defaults                       | Client          |
-| Content     | [✨ Sable](https://modrinth.com/mod/sable)                                                                         | Sculk-themed dimension/content                            | Both            |
-| Performance | [✨ Saturn](https://modrinth.com/mod/saturn)                                                                       | Memory & GC optimizations                                 | Both            |
-| Performance | [✨ ServerCore](https://modrinth.com/mod/servercore)                                                               | Server-side performance tweaks                            | Server          |
-| QoL         | [✨ Status Effect Bars](https://modrinth.com/mod/status-effect-bars)                                               | Visual duration bars for status effects                   | Client          |
-| QoL         | [✨ Stylish Effects](https://modrinth.com/mod/stylish-effects)                                                     | Customizable potion effect HUD                            | Client          |
-| Library     | [✨ Tesseract API](https://modrinth.com/mod/tesseract-api)                                                         | Dependency library                                        | Both            |
-| QoL         | [✨ Too Fast](https://modrinth.com/mod/too-fast)                                                                   | Removes vanilla "moving too fast" check                   | Both            |
-| Add-on      | [✨ TooManyRecipeViewers](https://modrinth.com/mod/too-many-recipe-viewers)                                        | Compatibility shim between EMI/JEI/REI                    | Both            |
-| QoL         | [✨ Tooltip overhaul](https://modrinth.com/mod/tooltip-overhaul)                                                   | Visually improved item tooltips                           | Client          |
-| QoL         | [✨ What Are They Up To](https://modrinth.com/mod/watut)                                                           | Shows what other players are doing                        | Both            |
-| Content     | [✨ WorldEdit](https://modrinth.com/mod/worldedit)                                                                 | In-game world editing toolset                             | Both            |
-| QoL         | [✨ Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap)                                                      | Customizable minimap with waypoints                       | Client          |
-| QoL         | [✨ Xaero's World Map](https://modrinth.com/mod/xaeros-world-map)                                                  | Persistent fullscreen world map                           | Client          |
-| Add-on      | [✨ XaeroPlus](https://modrinth.com/mod/xaeroplus)                                                                 | Extends Xaero's Minimap & World Map                       | Client          |
-| QoL         | [✨ Yeetus Experimentus](https://modrinth.com/mod/yeetus-experimentus)                                             | Removes the experimental settings warning                 | Both            |
-| Performance | [✨ spark](https://modrinth.com/mod/spark)                                                                         | In-game performance profiler                              | Both            |
+| Add-on      | [✨ Create Unbreakable Pickaxe](https://modrinth.com/mod/create-unbreakable-pickaxe)                              | Unbreakable utility tool for Create workflows             | Both            |
+| Add-on      | [✨ Create Unbreakable Netherite Axe](https://modrinth.com/mod/create-unbreakable-netherite-axe)                  | Unbreakable netherite axe add-on for Create tooling       | Both            |
+| Add-on      | [✨ Create Unbreakable Netherite Shovel](https://modrinth.com/mod/create-unbreakable-netherite-shovel)            | Unbreakable netherite shovel add-on for Create tooling    | Both            |
+| Add-on      | [✨ Create Unbreakable Netherite Sword](https://modrinth.com/mod/create-unbreakable-netherite-sword)              | Unbreakable netherite sword add-on for Create tooling     | Both            |
+| Add-on      | [✨ Create Unbreakable Netherite Paxel](https://modrinth.com/mod/create-unbreakable-netherite-paxel)              | Unbreakable paxel utility for all-in-one mining           | Both            |
+| Add-on      | [✨ Create Nuclear](https://modrinth.com/mod/create-nuclear)                                                       | Nuclear-themed machines and progression for Create         | Both            |
+| Add-on      | [✨ Create Tracks](https://modrinth.com/mod/create-tracks)                                                         | Extra train track variants and rail components            | Both            |
+| Add-on      | [✨ Create Escalated](https://modrinth.com/mod/create-escalated)                                                   | Higher-tier Create machines and automation parts          | Both            |
+| Add-on      | [✨ Create Cobblestone](https://modrinth.com/mod/create-cobblestone)                                               | Cobblestone generation/processing add-on for Create       | Both            |
+| Content     | [✨ Vista](https://modrinth.com/mod/vista)                                                                         | Visual/worldbuilding content expansion                    | Both            |
+| Add-on      | [✨ Vista Aeronautics Fix](https://modrinth.com/mod/vista-aeronautics-fix)                                         | Compatibility fix between Vista and Create Aeronautics    | Both            |
+| Add-on      | [✨ Create Propulsion Simulated](https://modrinth.com/mod/create-propulsion-simulated)                             | Simulated propulsion systems for Create contraptions      | Both            |
+| Content     | [✨ Applied Energistics 2](https://modrinth.com/mod/ae2)                                                           | Digital storage and autocrafting network                  | Both            |
+| Add-on      | [✨ Applied Energistics 2 Wireless Terminals](https://modrinth.com/mod/ae2wtlib)                                  | Wireless access terminals for AE2 networks                | Both            |
+| Add-on      | [✨ Rechiseled Applied Energistics 2](https://modrinth.com/mod/rechiseled-applied-energistics-2)                  | Rechiseled block variants for AE2                         | Both            |
+| Add-on      | [✨ AdvancedAE](https://modrinth.com/mod/advancedae)                                                               | Advanced components and automation upgrades for AE2       | Both            |
+| Add-on      | [✨ Extended AE](https://modrinth.com/mod/extendedae)                                                              | Extra late-game AE2 devices and parts                     | Both            |
+| Add-on      | [✨ ME Requester](https://modrinth.com/mod/me-requester)                                                           | Auto-request and stocking tool for AE2 systems            | Both            |
+| Add-on      | [✨ MEGA Cells](https://modrinth.com/mod/mega-cells)                                                               | Massive-capacity storage cells for AE2                    | Both            |
+| Library     | [✨ AE2WTLib](https://modrinth.com/mod/ae2wtlib)                                                                   | Library/API for AE2 wireless terminal add-ons             | Both            |
+| Add-on      | [✨ Applied Flux](https://modrinth.com/mod/applied-flux)                                                           | Flux/energy integrations for AE2                          | Both            |
+| QoL         | [✨ GuideME](https://modrinth.com/mod/guideme)                                                                     | In-game guidance and documentation tooling                | Both            |
+| Add-on      | [✨ Create AE2 recipes](https://modrinth.com/mod/create-ae2-recipes)                                               | Recipe bridge between Create and AE2                      | Both            |
+| Add-on      | [✨ Applied Create](https://modrinth.com/mod/applied-create)                                                       | Deeper interoperability between AE2 and Create            | Both            |
+| Add-on      | [✨ AE2 JEI Integration](https://modrinth.com/mod/ae2-jei-integration)                                             | Exposes AE2 data via JEI/EMI recipe views                 | Both            |
+| Add-on      | [✨ AE2 Network Analyser](https://modrinth.com/mod/ae2-network-analyser)                                           | Network diagnostics for AE2 channels and devices          | Both            |
+| Add-on      | [✨ AEInfinityBooster](https://modrinth.com/mod/aeinfinitybooster)                                                 | Extended/near-infinite wireless terminal range            | Both            |
+| Add-on      | [✨ EnderDrives](https://modrinth.com/mod/enderdrives)                                                             | Ender-themed storage drives for AE2                       | Both            |
+| Add-on      | [✨ Modular Bees](https://modrinth.com/mod/modular-bees)                                                           | Additional bee mechanics and integrations                 | Both            |
+| Content     | [✨ Productive Bees](https://modrinth.com/mod/productive-bees)                                                     | Bee-based resource automation and progression             | Both            |
+| Content     | [✨ Botany Pots](https://modrinth.com/mod/botany-pots)                                                             | Automated crop growth in compact pots                     | Both            |
+| Add-on      | [✨ Botany Trees](https://modrinth.com/mod/botany-trees)                                                           | Tree support expansion for Botany Pots                    | Both            |
+| Add-on      | [✨ Botany Pots Tiers](https://modrinth.com/mod/botany-pots-tiers)                                                 | Tiered upgrades for Botany Pots                           | Both            |
+| QoL         | [✨ Staaaaaaaaaaaack (Stxck)](https://modrinth.com/mod/stxck)                                                      | Increases stack-size quality-of-life options              | Both            |
+| Content     | [✨ Handcrafted](https://modrinth.com/mod/handcrafted)                                                             | Decorative furniture and building props                   | Both            |
+| Content     | [✨ CC Tweaked](https://modrinth.com/mod/cc-tweaked)                                                               | Programmable computers and turtles                        | Both            |
+| Add-on      | [✨ CCC Bridge](https://modrinth.com/mod/ccc-bridge)                                                               | Compatibility/integration bridge for CC ecosystems        | Both            |
+| Add-on      | [✨ CC Sable](https://modrinth.com/mod/cc-sable)                                                                   | CC integration content for Sable                          | Both            |
+| Add-on      | [✨ Tom's Peripherals](https://modrinth.com/mod/toms-peripherals)                                                  | Additional peripherals for CC Tweaked                     | Both            |
+| Add-on      | [✨ Advanced Peripherals](https://modrinth.com/mod/advanced-peripherals)                                           | More turtle/computer peripherals and APIs                | Both            |
+| Content     | [✨ AllTheCompressed](https://modrinth.com/mod/allthecompressed)                                                   | Many compressed block tiers for automation                | Both            |
+| QoL         | [✨ Tool Belt](https://modrinth.com/mod/tool-belt)                                                                 | Quick access utility belt for tools                       | Both            |
+| QoL         | [✨ Torchmaster](https://modrinth.com/mod/torchmaster)                                                             | Spawn-proofing and torch utility blocks                   | Both            |
+| Library     | [✨ Kubejs](https://modrinth.com/mod/kubejs)                                                                       | Scriptable data/recipe customization framework            | Both            |
+| Library     | [✨ GeckoLib 4](https://modrinth.com/mod/geckolib)                                                                 | Animated model library used by many content mods          | Both            |
+| Library     | [✨ Glodium](https://modrinth.com/mod/glodium)                                                                     | Dependency/library support for modern mods                | Both            |
+| Library     | [✨ ResourcefulLib](https://modrinth.com/mod/resourceful-lib)                                                      | Team Resourceful dependency library                       | Both            |
+| Library     | [✨ Rhino](https://modrinth.com/mod/rhino)                                                                         | JavaScript engine dependency for scripting mods           | Both            |
+| Add-on      | [✨ FTB JEI Extras](https://modrinth.com/mod/ftb-jei-extras)                                                       | Extra JEI/EMI helper views and recipe tools               | Both            |
+| Add-on      | [AdvancedLootInfo](https://modrinth.com/mod/advancedlootinfo)                                                     | Detailed loot tables for recipe viewers                   | Both            |
+| Performance | [All The Leaks](https://modrinth.com/mod/all-the-leaks)                                                           | Detects and reports memory leaks                          | Both            |
+| Content     | [Almanac](https://modrinth.com/mod/almanac)                                                                       | In-game almanac with crop/biome info                      | Both            |
+| Content     | [Apothic Spawners](https://modrinth.com/mod/apothic-spawners)                                                     | Configurable, upgradeable mob spawners                    | Both            |
+| QoL         | [AttributeFix](https://modrinth.com/mod/attributefix)                                                             | Removes hardcoded attribute caps                          | Both            |
+| Performance | [BadOptimizations](https://modrinth.com/mod/badoptimizations)                                                     | Misc client-side optimizations                            | Client          |
+| Content     | [Baubley Heart Canisters](https://modrinth.com/mod/baubley-heart-canisters)                                       | Craftable max-HP-increasing canisters                     | Both            |
+| Content     | [Better Beacons](https://modrinth.com/mod/better-beacons)                                                         | Expanded beacon effects and ranges                        | Both            |
+| QoL         | [Better Compatibility Checker](https://modrinth.com/mod/better-compatibility-checker)                             | Warns clients of mismatched server mods                   | Both            |
+| QoL         | [BetterF3](https://modrinth.com/mod/betterf3)                                                                     | Customizable F3 debug overlay                             | Client          |
+| Library     | [Bookshelf](https://modrinth.com/mod/bookshelf-lib)                                                               | Darkhax dependency library                                | Both            |
+| Library     | [Cerbons API](https://modrinth.com/mod/cerbons-api)                                                               | Dependency library                                        | Both            |
+| Performance | [Chunky](https://modrinth.com/mod/chunky)                                                                         | Pre-generates chunks to reduce live-load lag              | Both            |
+| Add-on      | [ChunkyBorder](https://modrinth.com/mod/chunkyborder)                                                             | World border integration for Chunky                       | Both            |
+| Library     | [Configurable](https://modrinth.com/mod/configurable)                                                             | Config library                                            | Both            |
+| Performance | [Continuity](https://modrinth.com/mod/continuity)                                                                 | Connected texture support                                 | Client          |
+| Library     | [CoroUtil](https://modrinth.com/mod/coroutil)                                                                     | Corosus mods dependency library                           | Both            |
+| QoL         | [Crafting Tweaks](https://modrinth.com/mod/crafting-tweaks)                                                       | Crafting grid management QoL                              | Both            |
+| QoL         | [Crash Assistant](https://modrinth.com/mod/crash-assistant)                                                       | Surfaces and helps report crashes                         | Client          |
+| Add-on      | [Create Aeronautics](https://modrinth.com/mod/create-aeronautics)                                                 | Flying contraptions for Create                            | Both            |
+| Add-on      | [Create Aeronautics – Rechiseled Compat](https://modrinth.com/mod/create-aeronautics-rechiseled-compat)         | Rechiseled compatibility for Create Aeronautics           | Both            |
+| Add-on      | [Create Crafts & Additions](https://modrinth.com/mod/createaddition)                                              | Flying contraptions for Create                            | Both            |
+| QoL         | [Create touchpad scrolling fix](https://modrinth.com/mod/create-touchpad-scrolling-fix)                          | Fixes Create scroll inputs on laptop touchpads            | Client          |
+| Add-on      | [Create: Enchantable Machinery](https://modrinth.com/mod/create-enchantable-machinery)                           | Allows enchanting Create machinery                        | Both            |
+| QoL         | [Distinguished Potions](https://modrinth.com/mod/distinguished-potions)                                           | Visually differentiates potion variants                   | Client          |
+| Library     | [DragonLib](https://modrinth.com/mod/dragonlib)                                                                   | Dependency library                                        | Both            |
+| QoL         | [Durability Tooltip](https://modrinth.com/mod/durability-tooltip)                                                 | Shows item durability in tooltips                         | Client          |
+| QoL         | [Effect Descriptions](https://modrinth.com/mod/effect-descriptions)                                               | Tooltip descriptions for status effects                   | Both            |
+| QoL         | [EnchantmentDescriptions](https://modrinth.com/mod/enchantment-descriptions)                                      | Tooltip descriptions for enchantments                     | Both            |
+| Add-on      | [Extra Mod Integrations](https://modrinth.com/mod/extra-mod-integrations)                                         | Cross-mod recipe integrations for EMI                     | Both            |
+| QoL         | [FallingTree](https://modrinth.com/mod/falling-tree)                                                              | Chops whole trees with one cut                            | Both            |
+| Performance | [Fast IP Ping](https://modrinth.com/mod/fast-ip-ping)                                                             | Speeds up server list ping                                | Client          |
+| Performance | [Fast Item Frames](https://modrinth.com/mod/fast-item-frames)                                                     | Optimizes item frame rendering                            | Both            |
+| Performance | [Fast Paintings](https://modrinth.com/mod/fast-paintings)                                                         | Optimizes painting rendering                              | Both            |
+| Performance | [Fast Suite](https://modrinth.com/mod/fast-suite)                                                                 | Bundle of misc fast-tick fixes                            | Both            |
+| Performance | [Fast Workbench](https://modrinth.com/mod/fastworkbench)                                                          | Optimizes crafting table tick                             | Both            |
+| Performance | [FastFurnace](https://modrinth.com/mod/fastfurnace)                                                               | Optimizes furnace tick                                    | Both            |
+| Content     | [Hostile Neural Networks](https://modrinth.com/mod/hostile-neural-networks)                                       | Simulate captured mobs to farm drops                      | Both            |
+| Content     | [Immersive Melodies](https://modrinth.com/mod/immersive-melodies)                                                 | Playable musical instruments                              | Both            |
+| QoL         | [ItemLocks](https://modrinth.com/mod/itemlocks)                                                                   | Lock inventory slots from being moved                     | Client          |
+| Add-on      | [Just Enough Archaeology](https://modrinth.com/mod/just-enough-archaeology)                                       | Shows archaeology loot in EMI/JEI                         | Both            |
+| Add-on      | [Just Enough Resources](https://modrinth.com/mod/just-enough-resources)                                           | Shows mob/world data in recipe viewers                    | Both            |
+| Performance | [Let Me Despawn](https://modrinth.com/mod/let-me-despawn)                                                         | Lets mobs despawn properly to reduce entity load          | Both            |
+| QoL         | [Lighty](https://modrinth.com/mod/lighty)                                                                         | Light-level overlay for mob spawning                      | Client          |
+| QoL         | [Load My F\*\*\*ing Tags](https://modrinth.com/mod/load-my-tags)                                               | Forces stubborn data tags to load                         | Both            |
+| Content     | [Mob Grinding Utils](https://modrinth.com/mod/mob-grinding-utils)                                                 | Mob farm utility blocks and items                         | Both            |
+| QoL         | [Model Gap Fix](https://modrinth.com/mod/modelgapfix)                                                             | Fixes block-model rendering gaps                          | Client          |
+| QoL         | [MoreMouseTweaks](https://modrinth.com/mod/moremousetweaks)                                                       | Adds further inventory mouse interactions                 | Client          |
+| Add-on      | [Mouse Tweaks x ItemLocks Compat](https://modrinth.com/mod/mousetweaks-itemlocks-compat)                         | Compatibility patch between Mouse Tweaks and ItemLocks    | Client          |
+| Add-on      | [MouseTweaks x Accessories Fix](https://modrinth.com/mod/mousetweaks-accessories-fix)                            | Fixes Mouse Tweaks behavior with Accessories slots        | Client          |
+| QoL         | [NBT Autocomplete](https://modrinth.com/mod/nbt-autocomplete)                                                     | Autocompletes NBT in commands                             | Client          |
+| QoL         | [NeoAuth](https://modrinth.com/mod/neoauth)                                                                       | Microsoft account auth helper                             | Client          |
+| QoL         | [Neruina](https://modrinth.com/mod/neruina)                                                                       | Prevents crashes from ticking entity errors               | Both            |
+| QoL         | [Overflowing Bars](https://modrinth.com/mod/overflowing-bars)                                                     | Stacks HP/armor/XP bars instead of shrinking icons        | Client          |
+| Library     | [Particle Core](https://modrinth.com/mod/particle-core)                                                           | Particle dependency library                               | Both            |
+| Library     | [Placebo](https://modrinth.com/mod/placebo)                                                                       | Shadows_of_Fire dependency library                        | Both            |
+| Library     | [PrickleMC](https://modrinth.com/mod/pricklemc)                                                                   | Dependency library                                        | Both            |
+| QoL         | [Redirected](https://modrinth.com/mod/redirected)                                                                 | Redirects deprecated/missing references                   | Both            |
+| QoL         | [Reese's Sodium Options](https://modrinth.com/mod/reeses-sodium-options)                                          | Improved Sodium video options menu                        | Client          |
+| QoL         | [Resource Pack Overrides](https://modrinth.com/mod/resource-pack-overrides)                                       | Per-pack settings & enable defaults                       | Client          |
+| Content     | [Sable](https://modrinth.com/mod/sable)                                                                           | Sculk-themed dimension/content                            | Both            |
+| Performance | [Saturn](https://modrinth.com/mod/saturn)                                                                         | Memory & GC optimizations                                 | Both            |
+| Performance | [ServerCore](https://modrinth.com/mod/servercore)                                                                 | Server-side performance tweaks                            | Server          |
+| QoL         | [Status Effect Bars](https://modrinth.com/mod/status-effect-bars)                                                 | Visual duration bars for status effects                   | Client          |
+| QoL         | [Stylish Effects](https://modrinth.com/mod/stylish-effects)                                                       | Customizable potion effect HUD                            | Client          |
+| Library     | [Tesseract API](https://modrinth.com/mod/tesseract-api)                                                           | Dependency library                                        | Both            |
+| QoL         | [Too Fast](https://modrinth.com/mod/too-fast)                                                                     | Removes vanilla "moving too fast" check                   | Both            |
+| Add-on      | [TooManyRecipeViewers](https://modrinth.com/mod/too-many-recipe-viewers)                                          | Compatibility shim between EMI/JEI/REI                    | Both            |
+| QoL         | [Tooltip overhaul](https://modrinth.com/mod/tooltip-overhaul)                                                     | Visually improved item tooltips                           | Client          |
+| QoL         | [What Are They Up To](https://modrinth.com/mod/watut)                                                             | Shows what other players are doing                        | Both            |
+| Content     | [WorldEdit](https://modrinth.com/mod/worldedit)                                                                   | In-game world editing toolset                             | Both            |
+| QoL         | [Xaero's Minimap](https://modrinth.com/mod/xaeros-minimap)                                                        | Customizable minimap with waypoints                       | Client          |
+| QoL         | [Xaero's World Map](https://modrinth.com/mod/xaeros-world-map)                                                    | Persistent fullscreen world map                           | Client          |
+| Add-on      | [XaeroPlus](https://modrinth.com/mod/xaeroplus)                                                                   | Extends Xaero's Minimap & World Map                       | Client          |
+| QoL         | [Yeetus Experimentus](https://modrinth.com/mod/yeetus-experimentus)                                               | Removes the experimental settings warning                 | Both            |
+| Performance | [spark](https://modrinth.com/mod/spark)                                                                           | In-game performance profiler                              | Both            |
 | Library     | [Accessories](https://modrinth.com/mod/accessories)                                                               | Modern equipment API; preferred by newer mods             | Both            |
 | Library     | [Accessories Compatibility Layer](https://modrinth.com/mod/accessories-compat-layer)                              | Bridges Accessories with Curios-dependent mods            | Both            |
 | Add-on      | [Accessorify](https://modrinth.com/mod/accessorify)                                                               | Makes vanilla items equippable as accessories             | Both            |
@@ -243,7 +279,6 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Performance | [Clumps](https://modrinth.com/mod/clumps)                                                                         | Clumps XP orbs to reduce XP farm lag                      | Both            |
 | Library     | [Collective](https://modrinth.com/mod/collective)                                                                 | Shared library for Serilum mods                           | Both            |
 | Content     | [Compressed Fuel](https://modrinth.com/mod/compressed-fuel)                                                       | Compressed fuel blocks for furnaces                       | Both            |
-| Performance | [Concurrent Chunk Management Engine](https://modrinth.com/mod/c2me-fabric)                                        | Chunk loading performance for clients & servers           | Both            |
 | Performance | [Configured Defaults](https://modrinth.com/mod/configured-defaults)                                               | Ships default configs/keybinds to users                   | Client          |
 | QoL         | [Construction Wands Revived](https://modrinth.com/mod/construction-wands-revived)                                 | Place lines or planes of blocks with a wand               | Both            |
 | QoL         | [Controlling](https://modrinth.com/mod/controlling)                                                               | Searchable keybind menu                                   | Client          |
@@ -356,7 +391,6 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | QoL         | [TrashSlot](https://modrinth.com/mod/trashslot)                                                                   | Adds a dedicated item trash slot to the inventory         | Both            |
 | Library     | [TxniLib](https://modrinth.com/mod/txnilib)                                                                       | Dependency library                                        | Both            |
 | Library     | [UltiCreate Compatibility](https://modrinth.com/mod/ulticreate-compatibility)                                     | Shared compatibility layer for UltiCreate addon mods      | Both            |
-| Performance | [Vanillin](https://modrinth.com/mod/vanillin)                                                                     | Entity rendering optimization                             | Client          |
 | QoL         | [Visual Workbench](https://modrinth.com/mod/visual-workbench)                                                     | Items stay visible in crafting tables                     | Both            |
 | Library     | [Zeta](https://modrinth.com/mod/zeta)                                                                             | Quark dependency                                          | Both            |
 | Library     | [oωo (owo-lib)](https://modrinth.com/mod/owo-lib)                                                                 | UI/config library                                         | Both            |
