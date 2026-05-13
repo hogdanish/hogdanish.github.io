@@ -169,7 +169,7 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 | Content     | [✨ Botany Pots](https://modrinth.com/mod/botany-pots)                                                            | Automated crop growth in compact pots                     | Both            |
 | Add-on      | [✨ Botany Trees](https://modrinth.com/mod/botany-trees)                                                          | Tree support expansion for Botany Pots                    | Both            |
 | Add-on      | [✨ Botany Pots Tiers](https://modrinth.com/mod/botany-pots-tiers)                                                | Tiered upgrades for Botany Pots                           | Both            |
-| QoL         | [✨ Staaaaaaaaaaaack (Stxck)](https://modrinth.com/mod/stxck)                                                     | Optimized dropped item stack size consolidation           | Both            |
+| Performance | [✨ Staaaaaaaaaaaack (Stxck)](https://modrinth.com/mod/stxck)                                                     | Optimized dropped item stack size consolidation           | Both            |
 | Content     | [✨ Handcrafted](https://modrinth.com/mod/handcrafted)                                                            | Decorative furniture and building props                   | Both            |
 | Content     | [✨ CC Tweaked](https://modrinth.com/mod/cc-tweaked)                                                              | Programmable computers and turtles                        | Both            |
 | Add-on      | [✨ CCC Bridge](https://modrinth.com/mod/ccc-bridge)                                                              | Compatibility/integration bridge for CC ecosystems        | Both            |
