@@ -6,7 +6,7 @@ IP: `mc.doke.house`
 
 ### 1. Download the modpack file
 
-Click here to download the modpack file: [BoredSMP Client 1.4.1](https://www.dropbox.com/scl/fi/bwa90i98tc6xawurwaa2d/BoredSMP-Client-1.4.1.mrpack?rlkey=bv6qd13flb3i916hryfgmuhfa&st=ju85lt0l&dl=0)
+Click here to download the modpack file: [BoredSMP Client 1.4.1](https://www.dropbox.com/scl/fi/nghscrjah622h5w0j0ic5/BoredSMP-Client-1.4.1.mrpack?rlkey=50gxr8ukn6kveqdmbc37u0258&st=1opo7825&dl=0)
 
 ### 2. Import into your launcher
 
@@ -89,6 +89,7 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 
 ### 1.4.1
 
+- Updated NeoForge to `21.1.230`
 - New mod: Building Gadgets
 - New mod: KubeJS Create
 - New mod: MoreJS KubeJS Addon
