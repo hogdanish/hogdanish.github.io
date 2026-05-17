@@ -6,7 +6,7 @@ IP: `mc.doke.house`
 
 ### 1. Download the modpack file
 
-Click here to download the modpack file: [BoredSMP Client 1.4.1](https://www.dropbox.com/scl/fi/nghscrjah622h5w0j0ic5/BoredSMP-Client-1.4.1.mrpack?rlkey=50gxr8ukn6kveqdmbc37u0258&st=1opo7825&dl=0)
+Click here to download the modpack file: [BoredSMP Client 1.4.1](https://www.dropbox.com/scl/fi/f97odr66zbahq18qvlc14/BoredSMP-Client-1.4.1.mrpack?rlkey=sr16aqu0jbd7zs9rgnui9n4jq&st=9lgj3gto&dl=0)
 
 ### 2. Import into your launcher
 
@@ -112,7 +112,6 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 - Updated: KubeKS (`2101.7.2-build.368`)
 - Updated: ModernFix (`5.27.8`)
 - Updated: Moonlight Lib (`3.0.9`)
-- Updated: More Culling (`1.0.8`)
 - Updated: Relics (`0.12.5`)
 - Updated: Sophisticated Backpacks (`3.25.45.1742`)
 - Updated: Sophisticated Core (`1.4.39.1852`)
