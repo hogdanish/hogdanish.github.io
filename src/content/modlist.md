@@ -54,7 +54,7 @@ Increase your memory allocation to something sensible. **8 GB** is plenty for mo
 **If you have a decent computer and can allocate 8-12 GB of RAM, use these:**
 
 ```
--XX:+UseZGC -XX:+UseCompactObjectHeaders -XX:+ZGenerational
+-XX:+UseZGC -XX:+UseCompactObjectHeaders
 ```
 
 If you run into issues while using shaders, add `-Dgraal.VectorizeSIMD=false` to the above arguments.
