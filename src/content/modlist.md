@@ -6,7 +6,7 @@ IP: `mc.doke.house`
 
 ### 1. Download the modpack file
 
-Click here to download the modpack file: [BoredSMP Client 1.4.0](https://www.dropbox.com/scl/fi/ap1axwo11y8xuz541uel5/BoredSMP-Client-1.4.0.mrpack?rlkey=l821wsrwyg6vaylqqbnao21od&st=rayf5h95&dl=0)
+Click here to download the modpack file: [BoredSMP Client 1.4.1](https://www.dropbox.com/scl/fi/bwa90i98tc6xawurwaa2d/BoredSMP-Client-1.4.1.mrpack?rlkey=bv6qd13flb3i916hryfgmuhfa&st=ju85lt0l&dl=0)
 
 ### 2. Import into your launcher
 
@@ -51,10 +51,19 @@ Increase your memory allocation to something sensible. **8–10 GB** is plenty f
 
 ### 4. Set optimized Java arguments
 
-Paste the following into the "Java Arguments" field:
+**If you are NOT using Distant Horizons:**
 
 ```
 -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+EagerJVMCI -Djdk.graal.CompilerConfiguration=enterprise -Djdk.graal.TuneInlinerExploration=1 -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:+UseStringDeduplication -XX:+UseAES -XX:+UseAESIntrinsics -XX:+UseFMA -XX:+UseLoopPredicate -XX:+RangeCheckElimination -XX:+OptimizeStringConcat -XX:+UseCompressedOops -XX:+UseThreadPriorities -XX:+OmitStackTraceInFastThrow -XX:+RewriteBytecodes -XX:+RewriteFrequentPairs -XX:+UseFPUForSpilling -XX:+UseVectorCmov -XX:+UseXMMForArrayCopy -XX:+EliminateLocks -XX:+DoEscapeAnalysis -XX:+AlignVector -XX:+OptimizeFill -XX:+EnableVectorSupport -XX:+UseCharacterCompareIntrinsics -XX:+UseCopySignIntrinsic -XX:+UseVectorStubs -XX:+UseFastJNIAccessors -XX:+UseInlineCaches -XX:+SegmentedCodeCache -XX:ThreadPriorityPolicy=1 -XX:+UseG1GC -XX:MaxGCPauseMillis=130 -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=28 -XX:G1HeapRegionSize=16M -XX:G1ReservePercent=20 -XX:G1MixedGCCountTarget=3 -XX:InitiatingHeapOccupancyPercent=10 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=0 -XX:SurvivorRatio=32 -XX:MaxTenuringThreshold=1 -XX:G1SATBBufferEnqueueingThresholdPercent=30 -XX:G1ConcMarkStepDurationMillis=5.0 -XX:AllocatePrefetchStyle=3 -XX:+UseCompactObjectHeaders
+```
+
+**If you ARE using Distant Horizons:**
+
+⚠️ I highly reccomend allocating at least 8-12 GiB of RAM as well if you use the below arguments.
+
+
+```
+-XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+AlwaysActAsServerClassMachine -XX:+AlwaysPreTouch -XX:+DisableExplicitGC -XX:+UseNUMA -XX:NmethodSweepActivity=1 -XX:ReservedCodeCacheSize=400M -XX:NonNMethodCodeHeapSize=12M -XX:ProfiledCodeHeapSize=194M -XX:NonProfiledCodeHeapSize=194M -XX:-DontCompileHugeMethods -XX:MaxNodeLimit=240000 -XX:NodeLimitFudgeFactor=8000 -XX:+UseVectorCmov -XX:+PerfDisableSharedMem -XX:+UseFastUnorderedTimeStamps -XX:+UseCriticalJavaThreadPriority -XX:ThreadPriorityPolicy=1 -XX:AllocatePrefetchStyle=3 -XX:+UseZGC -XX:AllocatePrefetchStyle=1 -XX:-ZProactive -XX:+UseZGC -XX:AllocatePrefetchStyle=1 -XX:-ZUncommit -XX:+ZGenerational
 ```
 
 ### 4. Ensure instance settings match
@@ -69,6 +78,46 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 - If you still encounter issues, try removing the `-XX:+UseCompactObjectHeaders` flag from the above arguments.
 
 ## Changelogs (click to expand)
+
+### 1.4.1
+
+- New mod: Building Gadgets
+- New mod: KubeJS Create
+- New mod: MoreJS KubeJS Addon
+- New mod: KubeJSable
+- New mod: Copycats+ aeronautics weight
+- New mod: Vista Craftable Cassettes
+- New mod: Super Factory Manager
+- New mod: Lithosphere
+- New mod: Distant Horizons (optional)
+- Updated: All The Leaks (`1.1.9`)
+- Updated: CC Sable (`1.3.4`)
+- Updated: CC Tweaked (`1.119.0`)
+- Updated: Complementary Shaders - Reimagined (`r5.8`)
+- Updated: Create Crafts & Additions (`neoforge-1.21.1-1.5.11`)
+- Updated: Create Dragons Plus (`1.10.1`)
+- Updated: Create Propulsion: Simulated (`1.1.4`)
+- Updated: Create Escalated (`1.3.0`)
+- Updated: Default Options (`21.1.6`)
+- Updated: EMI (`1.1.24`)
+- Updated: EnderDrives (`1.4.4`)
+- Updated: ExtendedAE (`2.2.32`)
+- Updated: Farmer's Delight (`1.3.2`)
+- Updated: FTB Backups 3 (`21.1.5`)
+- Updated: FTB Ultimine (`2101.1.14`)
+- Updated: Gnetum (`3.3.3`)
+- Updated: Immersive Armors (`1.7.6`)
+- Updated: Immersive Melodies (`0.6.4`)
+- Updated: Ixeris (`4.3.0`)
+- Updated: KubeKS (`2101.7.2-build.368`)
+- Updated: ModernFix (`5.27.8`)
+- Updated: Moonlight Lib (`3.0.9`)
+- Updated: More Culling (`1.0.8`)
+- Updated: Relics (`0.12.5`)
+- Updated: Sophisticated Backpacks (`3.25.45.1742`)
+- Updated: Sophisticated Core (`1.4.39.1852`)
+- Updated: Steam 'n' Rails Neoforge (`0.2.0`)
+- Updated: Tesseract API (`1.11.13`)
 
 ### 1.4.0
 
@@ -136,59 +185,68 @@ Navigate to the instance settings for the modpack itself and ensure its using th
 
 | **Type**    | **Name**                                                                                                          | **Note**                                                  | **Environment** |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | --------------- |
-| Add-on      | [✨ Create Unbreakable Pickaxe](https://modrinth.com/mod/create-unbreakable-pickaxe)                              | Unbreakable pickaxe                                       | Both            |
-| Add-on      | [✨ Create Unbreakable Netherite Axe](https://modrinth.com/mod/create-unbreakable-netherite-axe)                  | Unbreakable netherite axe                                 | Both            |
-| Add-on      | [✨ Create Unbreakable Netherite Shovel](https://modrinth.com/mod/create-unbreakable-netherite-shovel)            | Unbreakable netherite shovel                              | Both            |
-| Add-on      | [✨ Create Unbreakable Netherite Sword](https://modrinth.com/mod/create-unbreakable-netherite-sword)              | Unbreakable netherite sword                               | Both            |
-| Add-on      | [✨ Create Unbreakable Netherite Paxel](https://modrinth.com/mod/create-unbreakable-netherite-paxel)              | Unbreakable all-in-one tool                               | Both            |
-| Add-on      | [✨ Create Nuclear](https://modrinth.com/mod/create-nuclear)                                                      | Nuclear power                                             | Both            |
-| Add-on      | [✨ Create Tracks](https://modrinth.com/mod/create-tracks)                                                        | Adds tracks for Aeronautics vehicles (like tanks)         | Both            |
-| Add-on      | [✨ Create Escalated](https://modrinth.com/mod/create-escalated)                                                  | Escalators                                                | Both            |
-| Add-on      | [✨ Create Cobblestone](https://modrinth.com/mod/create-cobblestone)                                              | Lag-free stone variant generation                         | Both            |
-| Content     | [✨ Vista](https://modrinth.com/mod/vista)                                                                        | Televisions and security monitors                         | Both            |
-| Add-on      | [✨ Vista Aeronautics Fix](https://modrinth.com/mod/vista-aeronautics-fix)                                        | Compatibility fix between Vista and Create Aeronautics    | Both            |
-| Add-on      | [✨ Create Propulsion Simulated](https://modrinth.com/mod/create-propulsion-simulated)                            | Simulated propulsion systems for Create Aeronautics       | Both            |
-| Content     | [✨ Applied Energistics 2](https://modrinth.com/mod/ae2)                                                          | Digital storage and autocrafting network                  | Both            |
-| Add-on      | [✨ Applied Energistics 2 Wireless Terminals](https://modrinth.com/mod/ae2wtlib)                                  | Wireless access terminals for AE2 networks                | Both            |
-| Add-on      | [✨ Rechiseled Applied Energistics 2](https://modrinth.com/mod/rechiseled-applied-energistics-2)                  | Rechiseled block variants for AE2                         | Both            |
-| Add-on      | [✨ AdvancedAE](https://modrinth.com/mod/advancedae)                                                              | Advanced components and automation upgrades for AE2       | Both            |
-| Add-on      | [✨ Extended AE](https://modrinth.com/mod/extendedae)                                                             | Extra late-game AE2 devices and parts                     | Both            |
-| Add-on      | [✨ ME Requester](https://modrinth.com/mod/me-requester)                                                          | Auto-request and stocking tool for AE2 systems            | Both            |
-| Add-on      | [✨ MEGA Cells](https://modrinth.com/mod/mega-cells)                                                              | Massive-capacity storage cells for AE2                    | Both            |
-| Library     | [✨ AE2WTLib](https://modrinth.com/mod/ae2wtlib)                                                                  |                                                           | Both            |
-| Add-on      | [✨ Applied Flux](https://modrinth.com/mod/applied-flux)                                                          | Flux/energy integrations for AE2                          | Both            |
-| QoL         | [✨ GuideME](https://modrinth.com/mod/guideme)                                                                    | In-game guidance and documentation tooling                | Both            |
-| Add-on      | [✨ Create AE2 recipes](https://modrinth.com/mod/create-ae2-recipes)                                              | Recipe bridge between Create and AE2                      | Both            |
-| Add-on      | [✨ Applied Create](https://modrinth.com/mod/applied-create)                                                      | Deeper interoperability between AE2 and Create            | Both            |
-| Add-on      | [✨ AE2 JEI Integration](https://modrinth.com/mod/ae2-jei-integration)                                            | Exposes AE2 data via JEI/EMI recipe views                 | Both            |
-| Add-on      | [✨ AE2 Network Analyser](https://modrinth.com/mod/ae2-network-analyser)                                          | Network diagnostics for AE2 channels and devices          | Both            |
-| Add-on      | [✨ AEInfinityBooster](https://modrinth.com/mod/aeinfinitybooster)                                                | Extended/near-infinite wireless terminal range            | Both            |
-| Add-on      | [✨ EnderDrives](https://modrinth.com/mod/enderdrives)                                                            | Ender-themed storage drives for AE2                       | Both            |
-| Add-on      | [✨ Modular Bees](https://modrinth.com/mod/modular-bees)                                                          | Bee multiblock expansion for Productive Bees              | Both            |
-| Content     | [✨ Productive Bees](https://modrinth.com/mod/productive-bees)                                                    | Bee-based resource automation and progression             | Both            |
-| Content     | [✨ Botany Pots](https://modrinth.com/mod/botany-pots)                                                            | Automated crop growth in compact pots                     | Both            |
-| Add-on      | [✨ Botany Trees](https://modrinth.com/mod/botany-trees)                                                          | Tree support expansion for Botany Pots                    | Both            |
-| Add-on      | [✨ Botany Pots Tiers](https://modrinth.com/mod/botany-pots-tiers)                                                | Tiered upgrades for Botany Pots                           | Both            |
-| Performance | [✨ Staaaaaaaaaaaack (Stxck)](https://modrinth.com/mod/stxck)                                                     | Optimized dropped item stack size consolidation           | Both            |
-| Content     | [✨ Handcrafted](https://modrinth.com/mod/handcrafted)                                                            | Decorative furniture and building props                   | Both            |
-| Content     | [✨ CC Tweaked](https://modrinth.com/mod/cc-tweaked)                                                              | Programmable computers and turtles                        | Both            |
-| Add-on      | [✨ CCC Bridge](https://modrinth.com/mod/ccc-bridge)                                                              | Compatibility/integration bridge for CC ecosystems        | Both            |
-| Add-on      | [✨ CC Sable](https://modrinth.com/mod/cc-sable)                                                                  | CC integration content for Sable                          | Both            |
-| Add-on      | [✨ Tom's Peripherals](https://modrinth.com/mod/toms-peripherals)                                                 | Additional peripherals for CC Tweaked                     | Both            |
-| Add-on      | [✨ Advanced Peripherals](https://modrinth.com/mod/advanced-peripherals)                                          | More turtle/computer peripherals and APIs                 | Both            |
-| Content     | [✨ AllTheCompressed](https://modrinth.com/mod/allthecompressed)                                                  | Many compressed block tiers for automation                | Both            |
-| QoL         | [✨ Tool Belt](https://modrinth.com/mod/tool-belt)                                                                | Quick access utility belt for tools                       | Both            |
-| QoL         | [✨ Torchmaster](https://modrinth.com/mod/torchmaster)                                                            | Spawn-proofing and torch utility blocks                   | Both            |
-| Library     | [✨ Kubejs](https://modrinth.com/mod/kubejs)                                                                      |                                                           | Both            |
-| Library     | [✨ GeckoLib 4](https://modrinth.com/mod/geckolib)                                                                |                                                           | Both            |
-| Library     | [✨ Glodium](https://modrinth.com/mod/glodium)                                                                    |                                                           | Both            |
-| Library     | [✨ ResourcefulLib](https://modrinth.com/mod/resourceful-lib)                                                     |                                                           | Both            |
-| Library     | [✨ Rhino](https://modrinth.com/mod/rhino)                                                                        |                                                           | Both            |
-| Add-on      | [✨ FTB JEI Extras](https://modrinth.com/mod/ftb-jei-extras)                                                      | Extra JEI/EMI helper views and recipe tools               | Both            |
-| Add-on      | [AdvancedLootInfo](https://modrinth.com/mod/advancedlootinfo)                                                     | Detailed loot tables for recipe viewers                   | Both            |
+| Add-on      | [✨ Building Gadgets](https://modrinth.com/mod/building-gadgets)                                                   | Gadget-based building tools for large projects            | Both            |
+| Add-on      | [✨ KubeJS Create](https://modrinth.com/mod/kubejs-create)                                                        | Create-focused KubeJS scripting helpers                   | Both            |
+| Add-on      | [✨ MoreJS KubeJS Addon](https://modrinth.com/mod/morejs-kubejs-addon)                                            | Extra KubeJS scripting utilities and hooks                | Both            |
+| Add-on      | [✨ KubeJSable](https://modrinth.com/mod/kubejsable)                                                              | Expands what can be scripted with KubeJS                  | Both            |
+| Add-on      | [✨ Copycats+ Aeronautics Weight](https://modrinth.com/mod/copycats-aeronautics-weight)                           | Weight adjustments for Copycats+ in Aeronautics builds    | Both            |
+| Content     | [✨ Vista Craftable Cassettes](https://modrinth.com/mod/vista-craftable-cassettes)                                | Craftable cassette media for Vista                        | Both            |
+| Content     | [✨ Super Factory Manager](https://modrinth.com/mod/super-factory-manager)                                         | Logic-driven factory control and automation               | Both            |
+| Content     | [✨ Lithosphere](https://modrinth.com/mod/lithosphere)                                                             | New terrain and stone variety for worldgen                | Both            |
+| Performance | [✨ Distant Horizons](https://modrinth.com/mod/distant-horizons)                                                   | Optional long-distance terrain LOD rendering              | Client          |
+| Add-on      | [Create Unbreakable Pickaxe](https://modrinth.com/mod/create-unbreakable-pickaxe)                                 | Unbreakable pickaxe                                       | Both            |
+| Add-on      | [Create Unbreakable Netherite Axe](https://modrinth.com/mod/create-unbreakable-netherite-axe)                     | Unbreakable netherite axe                                 | Both            |
+| Add-on      | [Create Unbreakable Netherite Shovel](https://modrinth.com/mod/create-unbreakable-netherite-shovel)               | Unbreakable netherite shovel                              | Both            |
+| Add-on      | [Create Unbreakable Netherite Sword](https://modrinth.com/mod/create-unbreakable-netherite-sword)                 | Unbreakable netherite sword                               | Both            |
+| Add-on      | [Create Unbreakable Netherite Paxel](https://modrinth.com/mod/create-unbreakable-netherite-paxel)                 | Unbreakable all-in-one tool                               | Both            |
+| Add-on      | [Create Nuclear](https://modrinth.com/mod/create-nuclear)                                                         | Nuclear power                                             | Both            |
+| Add-on      | [Create Tracks](https://modrinth.com/mod/create-tracks)                                                           | Adds tracks for Aeronautics vehicles (like tanks)         | Both            |
+| Add-on      | [Create Escalated](https://modrinth.com/mod/create-escalated)                                                     | Escalators                                                | Both            |
+| Add-on      | [Create Cobblestone](https://modrinth.com/mod/create-cobblestone)                                                 | Lag-free stone variant generation                         | Both            |
+| Content     | [Vista](https://modrinth.com/mod/vista)                                                                           | Televisions and security monitors                         | Both            |
+| Add-on      | [Vista Aeronautics Fix](https://modrinth.com/mod/vista-aeronautics-fix)                                           | Compatibility fix between Vista and Create Aeronautics    | Both            |
+| Add-on      | [Create Propulsion Simulated](https://modrinth.com/mod/create-propulsion-simulated)                               | Simulated propulsion systems for Create Aeronautics       | Both            |
+| Content     | [Applied Energistics 2](https://modrinth.com/mod/ae2)                                                             | Digital storage and autocrafting network                  | Both            |
+| Add-on      | [Applied Energistics 2 Wireless Terminals](https://modrinth.com/mod/ae2wtlib)                                     | Wireless access terminals for AE2 networks                | Both            |
+| Add-on      | [Rechiseled Applied Energistics 2](https://modrinth.com/mod/rechiseled-applied-energistics-2)                     | Rechiseled block variants for AE2                         | Both            |
+| Add-on      | [AdvancedAE](https://modrinth.com/mod/advancedae)                                                                 | Advanced components and automation upgrades for AE2       | Both            |
+| Add-on      | [Extended AE](https://modrinth.com/mod/extendedae)                                                                | Extra late-game AE2 devices and parts                     | Both            |
+| Add-on      | [ME Requester](https://modrinth.com/mod/me-requester)                                                             | Auto-request and stocking tool for AE2 systems            | Both            |
+| Add-on      | [MEGA Cells](https://modrinth.com/mod/mega-cells)                                                                 | Massive-capacity storage cells for AE2                    | Both            |
+| Library     | [AE2WTLib](https://modrinth.com/mod/ae2wtlib)                                                                     |                                                           | Both            |
+| Add-on      | [Applied Flux](https://modrinth.com/mod/applied-flux)                                                             | Flux/energy integrations for AE2                          | Both            |
+| QoL         | [GuideME](https://modrinth.com/mod/guideme)                                                                       | In-game guidance and documentation tooling                | Both            |
+| Add-on      | [Create AE2 recipes](https://modrinth.com/mod/create-ae2-recipes)                                                | Recipe bridge between Create and AE2                      | Both            |
+| Add-on      | [Applied Create](https://modrinth.com/mod/applied-create)                                                         | Deeper interoperability between AE2 and Create            | Both            |
+| Add-on      | [AE2 JEI Integration](https://modrinth.com/mod/ae2-jei-integration)                                               | Exposes AE2 data via JEI/EMI recipe views                 | Both            |
+| Add-on      | [AE2 Network Analyser](https://modrinth.com/mod/ae2-network-analyser)                                             | Network diagnostics for AE2 channels and devices          | Both            |
+| Add-on      | [AEInfinityBooster](https://modrinth.com/mod/aeinfinitybooster)                                                   | Extended/near-infinite wireless terminal range            | Both            |
+| Add-on      | [EnderDrives](https://modrinth.com/mod/enderdrives)                                                               | Ender-themed storage drives for AE2                       | Both            |
+| Add-on      | [Modular Bees](https://modrinth.com/mod/modular-bees)                                                             | Bee multiblock expansion for Productive Bees              | Both            |
+| Content     | [Productive Bees](https://modrinth.com/mod/productive-bees)                                                       | Bee-based resource automation and progression             | Both            |
+| Content     | [Botany Pots](https://modrinth.com/mod/botany-pots)                                                               | Automated crop growth in compact pots                     | Both            |
+| Add-on      | [Botany Trees](https://modrinth.com/mod/botany-trees)                                                             | Tree support expansion for Botany Pots                    | Both            |
+| Add-on      | [Botany Pots Tiers](https://modrinth.com/mod/botany-pots-tiers)                                                   | Tiered upgrades for Botany Pots                           | Both            |
+| Performance | [Staaaaaaaaaaaack (Stxck)](https://modrinth.com/mod/stxck)                                                        | Optimized dropped item stack size consolidation           | Both            |
+| Content     | [Handcrafted](https://modrinth.com/mod/handcrafted)                                                               | Decorative furniture and building props                   | Both            |
+| Content     | [CC Tweaked](https://modrinth.com/mod/cc-tweaked)                                                                 | Programmable computers and turtles                        | Both            |
+| Add-on      | [CCC Bridge](https://modrinth.com/mod/ccc-bridge)                                                                 | Compatibility/integration bridge for CC ecosystems        | Both            |
+| Add-on      | [CC Sable](https://modrinth.com/mod/cc-sable)                                                                     | CC integration content for Sable                          | Both            |
+| Add-on      | [Tom's Peripherals](https://modrinth.com/mod/toms-peripherals)                                                    | Additional peripherals for CC Tweaked                     | Both            |
+| Add-on      | [Advanced Peripherals](https://modrinth.com/mod/advanced-peripherals)                                             | More turtle/computer peripherals and APIs                 | Both            |
+| Content     | [AllTheCompressed](https://modrinth.com/mod/allthecompressed)                                                     | Many compressed block tiers for automation                | Both            |
+| QoL         | [Tool Belt](https://modrinth.com/mod/tool-belt)                                                                   | Quick access utility belt for tools                       | Both            |
+| QoL         | [Torchmaster](https://modrinth.com/mod/torchmaster)                                                               | Spawn-proofing and torch utility blocks                   | Both            |
+| Library     | [Kubejs](https://modrinth.com/mod/kubejs)                                                                         |                                                           | Both            |
+| Library     | [GeckoLib 4](https://modrinth.com/mod/geckolib)                                                                   |                                                           | Both            |
+| Library     | [Glodium](https://modrinth.com/mod/glodium)                                                                       |                                                           | Both            |
+| Library     | [ResourcefulLib](https://modrinth.com/mod/resourceful-lib)                                                        |                                                           | Both            |
+| Library     | [Rhino](https://modrinth.com/mod/rhino)                                                                           |                                                           | Both            |
+| Add-on      | [FTB JEI Extras](https://modrinth.com/mod/ftb-jei-extras)                                                         | Extra JEI/EMI helper views and recipe tools               | Both            |
+| Add-on      | [AdvancedLootInfo](https://modrinth.com/mod/advancedlootinfo)                                                      | Detailed loot tables for recipe viewers                   | Both            |
 | Performance | [All The Leaks](https://modrinth.com/mod/all-the-leaks)                                                           | Detects and reports memory leaks                          | Both            |
-| Library     | [Almanac](https://modrinth.com/mod/almanac)                                                                       |                                                           | Both            |
-| Content     | [Apothic Spawners](https://modrinth.com/mod/apothic-spawners)                                                     | Configurable, upgradeable mob spawners                    | Both            |
+| Library     | [Almanac](https://modrinth.com/mod/almanac)                                                                        |                                                           | Both            |
+| Content     | [Apothic Spawners](https://modrinth.com/mod/apothic-spawners)                                                      | Configurable, upgradeable mob spawners                    | Both            |
 | QoL         | [AttributeFix](https://modrinth.com/mod/attributefix)                                                             | Removes hardcoded attribute caps                          | Both            |
 | Performance | [BadOptimizations](https://modrinth.com/mod/badoptimizations)                                                     | Misc client-side optimizations                            | Client          |
 | Content     | [Baubley Heart Canisters](https://modrinth.com/mod/baubley-heart-canisters)                                       | Craftable max-HP-increasing canisters                     | Both            |
